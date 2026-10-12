@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videoclipuri YouTube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LIST / SETTINGS SCREEN: videos listed top to bottom -->
+    <main id="list-view">
+        <header id="header">
+            <div id="title"></div>
+            <div id="hint"></div>
+        </header>
+        <div id="note" hidden></div>
+        <div id="list"></div>
+    </main>
+
+    <!-- PLAYER SCREEN -->
+    <section id="player-view" hidden>
+        <div id="player-stage">
+            <div id="yt-player"></div>
+            <!-- Transparent shield over the video: stops the YouTube iframe from
+                 stealing keyboard focus (which would make Space/Enter stop working) -->
+            <div id="player-overlay"></div>
+            <div id="player-status"></div>
+        </div>
+        <div id="controls-wrap" hidden>
+            <div id="controls-title"></div>
+            <div id="controls"></div>
+        </div>
+    </section>
+
+    <!-- On-screen error / info messages (so failures are never silent) -->
+    <div id="message" hidden></div>
+
+    <!-- Shared hub managers (same relative path as the other tools: apps/tools/<name>/) -->
+    <script src="../../../shared/voice-manager.js"></script>
+    <script src="../../../shared/ios-audio-fix.js"></script>
+    <script src="../../../shared/scan-manager.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

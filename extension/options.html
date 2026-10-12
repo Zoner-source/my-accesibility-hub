@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Companion settings · Benny's Hub</title><link rel="stylesheet" href="options.css"></head>
+<body><main>
+  <header>
+    <div class="topline"><span class="wordmark">Benny's Hub <span>/ Companion</span></span><span class="version" id="version"></span></div>
+    <p class="eyebrow">YOUR BROWSER, YOUR SETTINGS</p>
+    <h1>Companion settings</h1>
+    <p class="intro">One switch for streaming controls and Day Hub news.</p>
+  </header>
+  <section class="quick-start" aria-labelledby="access-heading">
+    <div><h2 id="access-heading">Streaming and news</h2><p id="access-description">Turn on access to all the services listed below. Your browser will ask you to approve access.</p><p id="access-state">Checking access…</p></div>
+    <button id="companion-access" class="toggle" type="button" role="switch" aria-checked="false" aria-labelledby="access-heading" aria-describedby="access-description access-state" disabled><span class="toggle-state">Off</span><span class="toggle-track" aria-hidden="true"></span></button>
+  </section>
+  <p id="status" role="status" aria-live="polite"></p>
+  <section class="sources" aria-labelledby="streaming-heading">
+    <h2 id="streaming-heading">What this enables</h2>
+    <h3 class="access-label">Streaming controls</h3>
+    <p class="section-description">Open videos from the Hub with the Companion control bar for playback, sound and returning to the Hub. Sign in on each service as usual.</p>
+    <ul id="services" class="service-list"></ul>
+    <h3 class="access-label">Day Hub news</h3>
+    <p class="section-description">Read headlines from NPR, BBC and Google News in Day Hub. Local news uses the place you enter in Day Hub.</p>
+  </section>
+  <section class="day-section" aria-labelledby="day-heading">
+    <h2 id="day-heading">Calendar</h2>
+    <p class="section-description">Connect your calendar separately to show your schedule in Day Hub.</p>
+    <details class="calendar-panel">
+      <summary><span>Calendar <small>Your private Google Calendar</small></span><span class="count" id="calendar-status">Not connected</span></summary>
+      <form id="calendar-form">
+        <label for="calendar">Private iCal address</label><input id="calendar" type="password" autocomplete="off" placeholder="Paste your .ics address" aria-describedby="calendar-note">
+        <p class="hint" id="calendar-note">Stored only in this browser profile. Your address is never shown here after saving.</p>
+        <div class="actions"><button class="primary" type="submit">Connect calendar</button><button id="clear-calendar" class="secondary" type="button">Remove calendar</button></div>
+      </form>
+    </details>
+  </section>
+  <details class="advanced" data-development-only><summary>Advanced · Local testing</summary><p>Use the development video page on this computer. Not needed for streaming services.</p><button id="fixture" class="secondary">Enable local video test</button></details>
+  <footer><p><button id="return-hub" class="secondary" type="button">Back to Hub</button> · <a href="https://narbehouse.github.io/bennyshub/companion-privacy.html" target="_blank" rel="noopener">Privacy</a> · <a href="mailto:narbehousellc@gmail.com">Support</a></p><p>Space: next · Hold Space: previous · Enter: choose</p><span>Developed by <a href="https://narbehouse.github.io/" target="_blank" rel="noopener">NARBE LLC</a></span></footer>
+</main><script type="module" src="options.mjs"></script></body></html>

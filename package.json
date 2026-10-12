@@ -1,0 +1,33 @@
+{
+  "name": "bennys-hub-web-experiment",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "build": "node scripts/build.cjs",
+    "audit:release": "node scripts/audit-release.cjs",
+    "check:pages": "node scripts/check-pages.cjs",
+    "prepare:github": "node scripts/prepare-github.cjs",
+    "package:release": "python scripts/package-release.py",
+    "test:browser": "node scripts/browser-check.cjs",
+    "test:streaming": "node scripts/check-streaming.cjs",
+    "test:streaming-episodes": "node scripts/check-streaming-episodes.cjs",
+    "test:connection": "node scripts/check-connection.cjs",
+    "test:player": "node scripts/check-player.cjs",
+    "test:fullscreen": "node scripts/check-player-fullscreen.cjs",
+    "test:options": "node scripts/check-options.cjs",
+    "test:exits": "node scripts/check-tool-exits.cjs",
+    "test:keyboard": "node scripts/check-keyboard.cjs",
+    "test:journal": "node scripts/check-journal-calendar.cjs",
+    "test:player-access": "node scripts/check-player-access.cjs",
+    "test:player-help": "node scripts/check-player-help.cjs",
+    "test:player-progress": "node scripts/check-player-progress.cjs",
+    "test:phraseboard": "node scripts/check-phraseboard.cjs && node scripts/check-phraseboard-editor.cjs && node scripts/check-phraseboard-predictions.cjs && node scripts/check-phraseboard-basic-editor.cjs && node scripts/check-phraseboard-settings.cjs",
+    "test:usage": "node scripts/check-usage-analytics.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "ical.js": "2.2.1"
+  }
+}

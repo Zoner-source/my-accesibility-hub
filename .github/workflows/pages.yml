@@ -1,0 +1,48 @@
+# Publishes only the reviewed dist artifact. Select GitHub Actions in Pages settings.
+# Check and publish pushes to main; allow a manual retry too.
+name: Publish reviewed website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          # Match the runtime used for the submitted, reproducible Companion ZIP.
+          node-version: '22.16.0'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Verify submitted Companion ZIP
+        run: sha256sum --check submission/COMPANION-SHA256SUMS.txt
+      - run: npm run audit:release
+      - run: npm run check:pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy reviewed artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

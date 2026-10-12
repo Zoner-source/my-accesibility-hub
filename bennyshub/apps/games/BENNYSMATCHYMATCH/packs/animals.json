@@ -1,0 +1,177 @@
+{
+    "categories": {
+        "Unassigned": [],
+        "Small Animals": [
+            {
+                "image": "dog.png",
+                "sound": null,
+                "title": "dog",
+                "altTitle": "Câine",
+                "ttsText": "",
+                "_created": 1767981795066
+            },
+            {
+                "image": "cat.png",
+                "sound": null,
+                "title": "cat",
+                "altTitle": "Pisică",
+                "ttsText": "",
+                "_created": 1767982247378
+            },
+            {
+                "image": "fish.svg",
+                "sound": null,
+                "title": "fish",
+                "altTitle": "Pește",
+                "ttsText": "",
+                "_created": 1767982256169
+            },
+            {
+                "image": "turtle.svg",
+                "sound": null,
+                "title": "turtle",
+                "altTitle": "Broască țestoasă",
+                "ttsText": "",
+                "_created": 1767982267557
+            },
+            {
+                "image": "lizard.svg",
+                "sound": null,
+                "title": "lizard",
+                "altTitle": "Șopârlă",
+                "ttsText": "",
+                "_created": 1767982281450
+            },
+            {
+                "image": "bird.png",
+                "sound": null,
+                "title": "bird",
+                "altTitle": "Pasăre",
+                "ttsText": "",
+                "_created": 1767982293761
+            },
+            {
+                "image": "ferret.svg",
+                "sound": null,
+                "title": "ferret",
+                "altTitle": "Dihor",
+                "ttsText": "",
+                "_created": 1767982305316
+            },
+            {
+                "image": "mouse.svg",
+                "sound": null,
+                "title": "mouse",
+                "altTitle": "Șoarece",
+                "ttsText": "",
+                "_created": 1767982316785
+            },
+            {
+                "image": "mole.png",
+                "sound": null,
+                "title": "mole",
+                "altTitle": "Cârtiță",
+                "ttsText": "",
+                "_created": 1768680802034
+            },
+            {
+                "image": "squirrel.png",
+                "sound": null,
+                "title": "squirrel",
+                "altTitle": "Veveriță",
+                "ttsText": "",
+                "_created": 1768680838231
+            },
+            {
+                "image": "rabbit.png",
+                "sound": null,
+                "title": "rabbit",
+                "altTitle": "Iepure",
+                "ttsText": "",
+                "_created": 1768680879725
+            },
+            {
+                "image": "frog.svg",
+                "sound": null,
+                "title": "frog",
+                "altTitle": "Broască",
+                "ttsText": "",
+                "_created": 1768680894567
+            }
+        ],
+        "Large Animals": [
+            {
+                "image": "whale.png",
+                "sound": null,
+                "title": "whale",
+                "altTitle": "Balenă",
+                "ttsText": "",
+                "_created": 1768920901744
+            },
+            {
+                "image": "elephant.png",
+                "sound": null,
+                "title": "elephant",
+                "altTitle": "Elefant",
+                "ttsText": "",
+                "_created": 1768920915904
+            },
+            {
+                "image": "giraffe.png",
+                "sound": null,
+                "title": "giraffe",
+                "altTitle": "Girafă",
+                "ttsText": "",
+                "_created": 1768920931770
+            },
+            {
+                "image": "rhino.svg",
+                "sound": null,
+                "title": "rhino",
+                "altTitle": "Rinocer",
+                "ttsText": "",
+                "_created": 1768920944816
+            },
+            {
+                "image": "moose.png",
+                "sound": null,
+                "title": "moose",
+                "altTitle": "Elan",
+                "ttsText": "",
+                "_created": 1768921042649
+            },
+            {
+                "image": "hippopotamus.png",
+                "sound": null,
+                "title": "hippopotamus",
+                "altTitle": "Hipopotam",
+                "ttsText": "",
+                "_created": 1768921078097
+            },
+            {
+                "image": "horse.png",
+                "sound": null,
+                "title": "horse",
+                "altTitle": "Cal",
+                "ttsText": "",
+                "_created": 1768921118458
+            },
+            {
+                "image": "gorilla.svg",
+                "sound": null,
+                "title": "gorilla",
+                "altTitle": "Gorilă",
+                "ttsText": "",
+                "_created": 1768921144297
+            },
+            {
+                "image": "bison.png",
+                "sound": null,
+                "title": "bison",
+                "altTitle": "Bizon",
+                "ttsText": "",
+                "_created": 1768921164288
+            }
+        ]
+    }
+}

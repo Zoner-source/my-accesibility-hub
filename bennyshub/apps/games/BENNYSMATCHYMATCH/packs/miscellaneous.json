@@ -1,0 +1,185 @@
+{
+    "categories": {
+        "Unassigned": [],
+        "Vehicles": [
+            {
+                "image": "train.png",
+                "sound": null,
+                "title": "train",
+                "altTitle": "Tren",
+                "ttsText": "",
+                "_created": 1768921845726
+            },
+            {
+                "image": "dumptruck.png",
+                "sound": null,
+                "title": "dump truck",
+                "altTitle": "Basculantă",
+                "ttsText": "",
+                "_created": 1768921874515
+            },
+            {
+                "image": "car.png",
+                "sound": null,
+                "title": "car",
+                "altTitle": "Mașină",
+                "ttsText": "",
+                "_created": 1768921888491
+            },
+            {
+                "image": "forklift.svg",
+                "sound": null,
+                "title": "fork lift",
+                "altTitle": "Stivuitor",
+                "ttsText": "",
+                "_created": 1768921907015
+            },
+            {
+                "image": "airplane.svg",
+                "sound": null,
+                "title": "airplane",
+                "altTitle": "Avion",
+                "ttsText": "",
+                "_created": 1768921928177
+            },
+            {
+                "image": "pickuptruck.png",
+                "sound": null,
+                "title": "pickup truck",
+                "altTitle": "Camionetă",
+                "ttsText": "",
+                "_created": 1768921943294
+            },
+            {
+                "image": "minivan.png",
+                "sound": null,
+                "title": "minivan",
+                "altTitle": "Monovolum",
+                "ttsText": "",
+                "_created": 1768921956052
+            },
+            {
+                "image": "sailboat.svg",
+                "sound": null,
+                "title": "sailboat",
+                "altTitle": "Barcă cu pânze",
+                "ttsText": "",
+                "_created": 1768921982937
+            },
+            {
+                "image": "f1car.png",
+                "sound": null,
+                "title": "F1 Car",
+                "altTitle": "Mașină de Formula 1",
+                "ttsText": "",
+                "_created": 1768922004739
+            },
+            {
+                "image": "tractor.png",
+                "sound": null,
+                "title": "tractor",
+                "altTitle": "Tractor",
+                "ttsText": "",
+                "_created": 1768922017126
+            },
+            {
+                "image": "motorcycle.png",
+                "sound": null,
+                "title": "motorcycle",
+                "altTitle": "Motocicletă",
+                "ttsText": "",
+                "_created": 1768922028773
+            },
+            {
+                "image": "bicycle.png",
+                "sound": null,
+                "title": "bicycle",
+                "altTitle": "Bicicletă",
+                "ttsText": "",
+                "_created": 1768922049478
+            },
+            {
+                "image": "fighterjet.png",
+                "sound": null,
+                "title": "fighter jet",
+                "altTitle": "Avion de vânătoare",
+                "ttsText": "",
+                "_created": 1768922067751
+            },
+            {
+                "image": "minibus.svg",
+                "sound": null,
+                "title": "minibus",
+                "altTitle": "Minibuz",
+                "ttsText": "",
+                "_created": 1768922087438
+            }
+        ],
+        "Flowers": [
+            {
+                "image": "rose.svg",
+                "sound": null,
+                "title": "rose",
+                "altTitle": "Trandafir",
+                "ttsText": "",
+                "_created": 1768922158951
+            },
+            {
+                "image": "tulip.svg",
+                "sound": null,
+                "title": "tulip",
+                "altTitle": "Lalea",
+                "ttsText": "",
+                "_created": 1768922170186
+            },
+            {
+                "image": "sunflower.svg",
+                "sound": null,
+                "title": "sunflower",
+                "altTitle": "Floarea-soarelui",
+                "ttsText": "",
+                "_created": 1768922186339
+            },
+            {
+                "image": "daisy.png",
+                "sound": null,
+                "title": "daisy",
+                "altTitle": "Margaretă",
+                "ttsText": "",
+                "_created": 1768922200457
+            },
+            {
+                "image": "daffodil.svg",
+                "sound": null,
+                "title": "daffodil",
+                "altTitle": "Narcisă",
+                "ttsText": "",
+                "_created": 1768922221864
+            },
+            {
+                "image": "lilies.png",
+                "sound": null,
+                "title": "lilies",
+                "altTitle": "Crini",
+                "ttsText": "",
+                "_created": 1768922475711
+            },
+            {
+                "image": "orchid.png",
+                "sound": null,
+                "title": "orchid",
+                "altTitle": "Orhidee",
+                "ttsText": "",
+                "_created": 1768922499213
+            },
+            {
+                "image": "lavender.png",
+                "sound": null,
+                "title": "lavender",
+                "altTitle": "Lavandă",
+                "ttsText": "",
+                "_created": 1768922524376
+            }
+        ]
+    }
+}
