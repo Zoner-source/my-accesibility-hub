@@ -1018,10 +1018,10 @@
     // Games are sourced live from bennyshub.com so new/updated games show up
     // automatically; the local apps/games/ cache (synced on demand from the
     // same source) is the offline fallback. See README "Games" section.
-    const GAMES_LIVE_BASE = 'https://narbehouse.github.io/bennyshub';
-    const GAMES_LIVE_MANIFEST_URL = `${GAMES_LIVE_BASE}/apps/games/games.json`;
-    const GAMES_LIVE_FETCH_TIMEOUT_MS = 3000;
-    const GAMES_LAUNCH_PROBE_TIMEOUT_MS = 2500;
+   const GAMES_LIVE_BASE = `${window.location.origin}${window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/bennyshub/'))}/bennyshub`;
+   const GAMES_LIVE_MANIFEST_URL = `${GAMES_LIVE_BASE}/apps/games/games.json`;
+   const GAMES_LIVE_FETCH_TIMEOUT_MS = 3000;
+   const GAMES_LAUNCH_PROBE_TIMEOUT_MS = 2500;
 
     async function fetchWithTimeout(url, timeoutMs, opts = {}) {
       const controller = new AbortController();
