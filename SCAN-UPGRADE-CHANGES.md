@@ -818,3 +818,10 @@ Changed web files (Electron flag: not ported; Electron keeps its IPC storage):
 - SCAN-UPGRADE-CHANGES.md — this record.
 
 Validation: Chrome headless against scripts/serve.cjs. 342 words load with no 404s. "CA" suggests CARE, CAFEA, CARNE…; "MĂ DOARE " suggests CAPUL, BURTA, SPATELE. "ZORRO" typed with the on-screen keys is stored, and after a reload "ZO" suggests ZORRO. Not changed: the Journal still reads the English web_keyboard_predictions.json.
+
+## 2026-10-22 — Tic Tac Toe test server hardened; Benny Says debug strip removed
+
+- bennyshub/apps/games/BENNYSTICTACTOE/server.py — kept at the owner's request. It now binds to 127.0.0.1 with Flask debug off. Before, it ran `debug=True` on 0.0.0.0, which exposed the Werkzeug debugger (remote code execution) to the local network. The file is optional local tooling; the site does not use it.
+- bennyshub/apps/games/BENNYSAYS/index.html — removed the temporary on-screen debug strip and its two `__debugLog` calls (speak and player pick), plus the duplicate controls hint at the bottom of the page (the canvas already draws the same hint under the menu). Gameplay, speech and timing are unchanged.
+
+Electron flag: not ported. Validation: Benny Says loads in Chrome headless with no script errors and no debug strip, and Space/Enter still drive the menu. server.py parses.
