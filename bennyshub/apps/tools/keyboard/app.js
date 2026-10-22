@@ -332,9 +332,10 @@
       const longPressThreshold = scanSpeeds[currentScanSpeed].longPress;
       
       // Forward scan if:
-      // 1. Short press (250ms to longPress threshold), OR
+      // 1. Short press of any length up to the longPress threshold (no minimum
+      //    press length; scan-manager's cooldown already filters switch bounce), OR
       // 2. Long press but no backward scanning actually occurred
-      if ((pressDuration >= 250 && pressDuration <= longPressThreshold) || 
+      if (pressDuration <= longPressThreshold ||
           (pressDuration > longPressThreshold && !backwardScanningOccurred)) {
         console.log("Triggering forward scan - either short press or long press without backward scanning");
         if (inSettingsMode) {
@@ -372,7 +373,7 @@
       const pressDuration = Date.now() - returnPressTime;
       console.log(`Return released after ${pressDuration}ms`);
       
-      if (!longPressTriggered && pressDuration >= 100) {
+      if (!longPressTriggered) {
         console.log("Short press - selecting");
         selectButton();
       }

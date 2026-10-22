@@ -825,3 +825,11 @@ Validation: Chrome headless against scripts/serve.cjs. 342 words load with no 40
 - bennyshub/apps/games/BENNYSAYS/index.html — removed the temporary on-screen debug strip and its two `__debugLog` calls (speak and player pick), plus the duplicate controls hint at the bottom of the page (the canvas already draws the same hint under the menu). Gameplay, speech and timing are unchanged.
 
 Electron flag: not ported. Validation: Benny Says loads in Chrome headless with no script errors and no debug strip, and Space/Enter still drive the menu. server.py parses.
+
+## 2026-10-22 — Keyboard ignored quick switch presses
+
+Owner report after the prediction fix: the keyboard still did not work as intended. On the live site, word predictions and learning work, but the keyboard silently ignored any Space press shorter than 250 ms and any Enter press shorter than 100 ms. These local minimum press lengths contradict the project rule (no minimum press length; forward inputs after the shared cooldown). No other app has them. Removed both; switch bounce is still filtered by scan-manager's cooldown/anti-tremor guard (inputSensitivity, 50 ms default). That guard swallows rejected keyups and reports them through narbe-input-cancelled, so a press cannot trigger twice. Hold thresholds are unchanged: Space held past longPress scans backward, Enter held 3 s jumps to the predictions row.
+
+Changed web file (Electron flag: not ported): bennyshub/apps/tools/keyboard/app.js — stopScanning/stopSelecting press-length checks.
+
+Validation: Chrome headless against scripts/serve.cjs. Space taps of 40/80/150 ms each advance one row, and a 60 ms Enter selects/inserts. A 4.5 s Space hold scans backward; a 3.3 s Enter hold opens the word predictions. No script errors.
