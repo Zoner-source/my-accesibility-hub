@@ -67,9 +67,9 @@
   // We keep this structure for manual interaction timeouts (Long Press) which aren't in Manager yet
   // But we will try to scale them relative to the main speed if we can, or just keep fixed defaults for hold durations.
   const scanSpeeds = {
-    slow: { forward: 1500, backward: 3000, longPress: 2000 },
-    medium: { forward: 1000, backward: 2000, longPress: 2000 },
-    fast: { forward: 500, backward: 1000, longPress: 2000 }
+    slow: { forward: 1500, backward: 3000, longPress: 1000 },
+    medium: { forward: 1000, backward: 2000, longPress: 1000 },
+    fast: { forward: 500, backward: 1000, longPress: 1000 }
   };
   
   // Helper to get current interval from Manager
@@ -304,7 +304,7 @@
       setTimeout(() => {
         if (spacebarPressed && (Date.now() - spacebarPressTime) >= longPressThreshold) {
           console.log("Long press detected - starting backward scanning at " + managerInterval + "ms");
-          backwardScanInterval = setInterval(() => {
+          const stepBackward = () => {
             if (spacebarPressed) {
               backwardScanningOccurred = true; // Mark that backward scanning is happening
               if (inSettingsMode) {
@@ -313,7 +313,10 @@
                 scanBackward();
               }
             }
-          }, managerInterval); // Use Manager's scan interval
+          };
+          // First step as soon as the hold is recognised, then one per scan interval
+          stepBackward();
+          backwardScanInterval = setInterval(stepBackward, managerInterval); // Use Manager's scan interval
         }
       }, longPressThreshold);
     }

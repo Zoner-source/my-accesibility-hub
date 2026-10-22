@@ -76,7 +76,7 @@ class PredictionSystem {
       } else {
         // Browser: Romanian base vocabulary (relative path, so it works under
         // any GitHub Pages sub-path), then the words learned on this device.
-        const response = await fetch('ro_predictions.json?v=20261022c');
+        const response = await fetch('ro_predictions.json?v=20261022d');
         if (response.ok) {
           this.data = await response.json();
         }
@@ -102,7 +102,8 @@ class PredictionSystem {
           const base = this.data[table][key];
           this.data[table][key] = {
             count: (base ? base.count : 0) + entry.count,
-            last_used: entry.last_used
+            last_used: entry.last_used,
+            learned: true
           };
         }
       }
@@ -121,6 +122,7 @@ class PredictionSystem {
     this.data[table][key].last_used = timestamp;
 
     if (this.isElectron) return;
+    this.data[table][key].learned = true;
     const learned = this.learned[table];
     if (!learned[key]) learned[key] = { count: 0, last_used: timestamp };
     learned[key].count++;
@@ -164,7 +166,10 @@ class PredictionSystem {
       recencyMultiplier = 0.1; // Older = 10x penalty
     }
     
-    return count * recencyMultiplier;
+    // Words/phrases learned on this device always outrank the built-in
+    // vocabulary, even after their recency boost has faded.
+    const learnedBonus = data.learned ? 10000 : 0;
+    return count * recencyMultiplier + learnedBonus;
   }
 
   async getHybridPredictions(buffer) {

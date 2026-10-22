@@ -855,3 +855,15 @@ Owner report: the written text reset on every reload, and the "mama" suggestions
 - SCAN-UPGRADE-CHANGES.md — this record.
 
 Electron flag: not ported. Validation: Chrome headless. "MAMA VINO " typed by switch survives a reload with suggestions (AICI…); after Șterge tot and a reload the bar is empty. All versioned assets load.
+
+## 2026-10-22 — Keyboard inside the Hub (browser): real cause of missing predictions; faster reverse scan
+
+Owner report: still no "mama" predictions, learned words unreliable, reverse-scan hold too long. Earlier checks opened the keyboard page directly, but the owner opens it from the Hub. shared/electron-bridge.js created a stub window.electronAPI in any iframe, so inside the browser Hub predictions.js took the Electron path. It asked the Hub for predictions, nothing answered, the call timed out after 15 s, and the keyboard ran with 0 words. Learned words were never written to localStorage. Confirmed on the live Hub before the fix: isElectron true, 0 words, "MAMA" → six empty chips.
+
+- bennyshub/shared/electron-bridge.js — create the bridge only when the parent actually has electronAPI. A cross-origin parent keeps the old behavior. This also fixes Cuvintele mele (phraseboard), which loads the same bridge.
+- bennyshub/apps/tools/keyboard/predictions.js — learned entries are flagged and get a fixed bonus, so they always outrank the built-in vocabulary after their recency boost fades (before, a word used once dropped below it after about a week).
+- bennyshub/apps/tools/keyboard/app.js — reverse scan: hold threshold 2 s → 1 s, and the first backward step fires as soon as the hold is recognized. Before, the first step came a full scan interval later, about 4 s at default speed.
+- bennyshub/apps/tools/keyboard/index.html — version tags bumped to ?v=20261022d; electron-bridge.js versioned too.
+- SCAN-UPGRADE-CHANGES.md — this record.
+
+Electron flag: electron-bridge.js changes shared bridge behavior. It is not ported, and in Electron the parent has electronAPI, so behavior there is unchanged. Validation: Chrome headless, keyboard opened inside the Hub iframe. isElectron false, 343 words, "MAMA" → VINO, TE, AM, UNDE, VREAU. A 60-day-old learned word ranks first. Taps advance one row each. Holding Space steps back after 1,041 ms. A word typed in the Hub is saved to localStorage.
