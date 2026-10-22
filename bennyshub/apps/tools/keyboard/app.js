@@ -586,7 +586,10 @@
           const currentPartialWord = currentWord();
           let newBuffer = buffer;
           
-          if (currentPartialWord && !buffer.endsWith(" ")) {
+          // Completions replace the partial word; next-word suggestions shown after a
+          // finished word (e.g. "Mama" -> "VINO") are appended after a space instead.
+          if (currentPartialWord && !buffer.endsWith(" ") &&
+              word.toUpperCase().startsWith(currentPartialWord.toUpperCase())) {
             newBuffer = buffer.slice(0, -currentPartialWord.length) + word + " ";
           } else {
             if (!buffer.endsWith(" ") && buffer.length) newBuffer += " ";
@@ -674,7 +677,7 @@
         chip.addEventListener("click", () => {
           const partial = currentWord();
           let newBuf = buffer;
-          if (partial && !buffer.endsWith(" ")) {
+          if (partial && !buffer.endsWith(" ") && w.toUpperCase().startsWith(partial.toUpperCase())) {
             newBuf = buffer.slice(0, -partial.length) + w + " ";
           } else {
             if (!buffer.endsWith(" ") && buffer.length) newBuf += " ";

@@ -833,3 +833,14 @@ Owner report after the prediction fix: the keyboard still did not work as intend
 Changed web file (Electron flag: not ported): bennyshub/apps/tools/keyboard/app.js — stopScanning/stopSelecting press-length checks.
 
 Validation: Chrome headless against scripts/serve.cjs. Space taps of 40/80/150 ms each advance one row, and a 60 ms Enter selects/inserts. A 4.5 s Space hold scans backward; a 3.3 s Enter hold opens the word predictions. No script errors.
+
+## 2026-10-22 — Keyboard: suggestions after a finished word
+
+Owner report: no predictions after typing "mama". Once the current word was a complete known word with no space yet, nothing could complete it, so all six word chips were empty until Space was pressed. Then only generic words appeared, because the vocabulary had no phrases starting with MAMA.
+
+- bennyshub/apps/tools/keyboard/predictions.js — when the current word is a known word, empty slots are filled with next-word predictions (the same path as after a space).
+- bennyshub/apps/tools/keyboard/app.js — choosing a chip (switch selection and click) replaces the partial word only when the chip completes it; otherwise it appends a space and the chip.
+- scripts/build-keyboard-ro-predictions.cjs, bennyshub/apps/tools/keyboard/ro_predictions.json — 10 family phrases (MAMA/TATA VINO AICI, TE IUBESC, UNDE EȘTI, …); now 87 bigrams and 55 trigrams.
+- SCAN-UPGRADE-CHANGES.md — this record.
+
+Electron flag: not ported. Validation: Chrome headless. "MAMA" typed by switch (80 ms presses) suggests VINO, TE, AM, UNDE, VREAU, MI-E. Selecting VINO with long-Enter → Enter → Enter gives "MAMA VINO " and then suggests AICI. Partial words still complete as before ("Ma" → MAI, MAMA, MASĂ…).

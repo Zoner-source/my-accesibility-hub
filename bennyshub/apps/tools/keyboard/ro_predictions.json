@@ -1669,6 +1669,54 @@
   "MULȚI ANI": {
    "count": 200,
    "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA VINO": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA TE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA AM": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA UNDE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UNDE EȘTI": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA VREAU": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU APĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA MI-E": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA VINO": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA TE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA UNDE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA VREAU": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
   }
  },
  "trigrams": {
@@ -1849,6 +1897,46 @@
    "last_used": "2025-01-01T00:00:00.000Z"
   },
   "LA MULȚI ANI": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA VINO AICI": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA TE IUBESC": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA AM NEVOIE": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA UNDE EȘTI": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA VREAU APĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA MI-E FOAME": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA VINO AICI": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA TE IUBESC": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA UNDE EȘTI": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA VREAU SĂ": {
    "count": 300,
    "last_used": "2025-01-01T00:00:00.000Z"
   }

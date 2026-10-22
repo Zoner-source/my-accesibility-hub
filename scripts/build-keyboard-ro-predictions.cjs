@@ -87,6 +87,16 @@ SCHIMBĂ CANALUL TE ROG
 DESCHIDE TELEVIZORUL TE ROG
 POFTĂ BUNĂ
 LA MULȚI ANI
+MAMA VINO AICI
+MAMA TE IUBESC
+MAMA AM NEVOIE DE AJUTOR
+MAMA UNDE EȘTI
+MAMA VREAU APĂ
+MAMA MI-E FOAME
+TATA VINO AICI
+TATA TE IUBESC
+TATA UNDE EȘTI
+TATA VREAU SĂ MĂ JOC
 `.trim().split('\n').map(p => p.trim().split(/\s+/));
 
 // Base entries are dated well in the past so anything Ben types ranks above them.

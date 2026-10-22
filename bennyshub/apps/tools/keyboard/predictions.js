@@ -298,6 +298,17 @@ class PredictionSystem {
       }
     }
     
+    // PRIORITY 2b: The current word is already a complete known word (e.g. "MAMA"
+    // with no space yet) - fill the row with what usually comes next instead of
+    // leaving it empty. app.js appends these after a space rather than replacing.
+    if (currentWord && finalPredictions.length < 6 && (this.data.frequent_words || {})[currentWord]) {
+      const nextWords = await this.getHybridPredictions(cleaned + ' ');
+      for (const word of nextWords) {
+        if (finalPredictions.length >= 6) break;
+        if (word && !finalPredictions.includes(word)) finalPredictions.push(word);
+      }
+    }
+
     // PRIORITY 3: Most frequent words (when after a space with no partial word)
     if (hasTrailingSpace && !currentWord && finalPredictions.length < 6) {
       const sortedWords = Object.entries(this.data.frequent_words || {})
