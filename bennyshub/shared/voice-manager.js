@@ -171,6 +171,12 @@ window.NarbeVoiceManager = (function() {
         } else {
           console.warn(`NarbeVoiceManager: Saved voice "${settings.voiceName}" not found, using index ${settings.voiceIndex}`);
         }
+      } else {
+        // No voice chosen yet: the UI is Romanian, so default to a Romanian voice when one exists.
+        const romanianIndex = englishVoices.findIndex(voice =>
+          voice.lang.toLowerCase().startsWith('ro') || voice.name.toLowerCase().includes('romanian')
+        );
+        if (romanianIndex >= 0) settings.voiceIndex = romanianIndex;
       }
 
       // Ensure voice index is within bounds
@@ -340,7 +346,7 @@ window.NarbeVoiceManager = (function() {
    * Get a user-friendly display name for a voice
    */
   function getVoiceDisplayName(voice) {
-    if (!voice) return "Default";
+    if (!voice) return "Implicită";
     
     const name = voice.name.toLowerCase();
     

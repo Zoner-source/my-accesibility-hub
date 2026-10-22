@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Benny Says</title>
+  <title>Benny spune</title>
   <style>
     html, body { margin: 0; height: 100%; background: #0f172a; color: #e5e7eb; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
     #wrap { position: relative; width: 100%; height: 100%; }
@@ -14,7 +14,7 @@
 <body>
   <div id="wrap">
     <canvas id="game"></canvas>
-    <div class="hint">Space = scan (hold Space = scan back). Return = select. Click = direct select.</div>
+    <div class="hint">Space = scanează (ține apăsat Space = scanează înapoi). Return = selectează. Click = selectează direct.</div>
   </div>
 
   <!-- Include shared voice manager -->
@@ -832,7 +832,7 @@
 
       if (phase === Phase.MAIN) {
         // Title
-        ctx.fillText('Benny Says', w/2, 24);
+        ctx.fillText('Benny spune', w/2, 24);
 
         // Big menu buttons
         menuBounds = [];

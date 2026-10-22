@@ -2,11 +2,11 @@
   "tools": [
     {
       "id": "phraseboard",
-      "title": "Phrase & Media Board",
-      "description": "Editable phrase & media tiles with scanning and speak-out.",
+      "title": "Cuvintele mele",
+      "description": "Plăci editabile cu fraze și media, cu scanare și citire cu voce tare.",
       "path": "apps/tools/phraseboard/index.html",
       "image": "images/tools/phraseboard.png",
-      "genres": ["Communication", "Accessibility"],
+      "genres": ["Comunicare", "Accesibilitate"],
       "needsServer": true
     },
     {
@@ -15,7 +15,7 @@
   "description": "Tastatură scanabilă cu litere românești (ă, â, î, ș, ț) și text predictiv.",
   "path": "apps/tools/keyboard/index.html",
   "image": "images/tools/keyboard.png",
-  "genres": ["Communication", "Accessibility"]
+  "genres": ["Comunicare", "Accesibilitate"]
 },
 {
   "id": "youtube",
@@ -23,7 +23,7 @@
   "description": "Listă de videoclipuri YouTube cu scanare și redare prin switch.",
   "path": "apps/tools/youtube/index.html",
   "image": "images/tools/youtube.png",
-  "genres": ["Media", "Accessibility"]
+  "genres": ["Media", "Accesibilitate"]
 }
   ]
 }

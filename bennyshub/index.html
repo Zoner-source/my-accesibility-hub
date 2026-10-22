@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0MEEN7YP4"></script>
@@ -14,7 +14,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NARBE Benny's Access Hub</title>
-  <meta name="description" content="Hub NARBE pentru navighare prin comutatoare" />
+  <meta name="description" content="Hub NARBE pentru navigare prin comutatoare" />
   <style>
     :root{
       --narbe-orange:#ff5c00;
@@ -688,18 +688,18 @@
   <div class="iframe-container" id="iframe-container">
     <div class="iframe-header">
       <button class="iframe-back" id="iframe-back">← Înapoi</button>
-      <div class="iframe-title" id="iframe-title">Tool</div>
+      <div class="iframe-title" id="iframe-title">Instrument</div>
     </div>
     <div class="iframe-wrapper">
       <iframe id="app-iframe" title="Instrument integrat" allow="fullscreen"></iframe>
     </div>
   </div>
 
-  <a class="sr-only" href="#main">Skip to main content</a>
+  <a class="sr-only" href="#main">Sari la conținutul principal</a>
   <div class="container">
 
     <header>
-      <div class="brand" aria-label="NARBE brand header">
+      <div class="brand" aria-label="Antet NARBE">
         <div class="brand-left">
           <div>
             <div class="title">NARBE HUB</div>
@@ -763,13 +763,13 @@
         <div class="controls-bar">
           <div class="controls-left">
             <button class="backbtn" data-target="home" aria-label="Înapoi la meniu principal">← Înapoi</button>
-            <button class="nav-btn" id="tools-genre-toggle">Filter: Toate</button>
+            <button class="nav-btn" id="tools-genre-toggle">Filtru: Toate</button>
             <button class="nav-btn" id="tools-genre-reset">Resetează</button>
           </div>
           <div class="controls-right">
             <span class="page-info" id="tools-page-info">Pagina 1 din 1</span>
-            <button class="nav-btn" id="tools-prev" disabled aria-label="Previous page">← Anterior</button>
-            <button class="nav-btn" id="tools-next" disabled aria-label="Next page">Următorul →</button>
+            <button class="nav-btn" id="tools-prev" disabled aria-label="Pagina anterioară">← Anterior</button>
+            <button class="nav-btn" id="tools-next" disabled aria-label="Pagina următoare">Următorul →</button>
           </div>
         </div>
         <h2 id="tools-heading" class="sr-only">Instrumente</h2>
@@ -784,20 +784,20 @@
         <div class="controls-bar">
           <div class="controls-left">
             <button class="backbtn" data-target="home" aria-label="Înapoi la meniu principal">← Înapoi</button>
-            <button class="nav-btn" id="games-genre-toggle">Filter: Toate</button>
+            <button class="nav-btn" id="games-genre-toggle">Filtru: Toate</button>
             <button class="nav-btn" id="games-genre-reset">Resetează</button>
           </div>
           <div class="controls-right">
-            <span class="page-info" id="games-page-info">Page 1 of 1</span>
-            <button class="nav-btn" id="games-prev" disabled aria-label="Previous page">← Previous</button>
-            <button class="nav-btn" id="games-next" disabled aria-label="Next page">Next →</button>
+            <span class="page-info" id="games-page-info">Pagina 1 din 1</span>
+            <button class="nav-btn" id="games-prev" disabled aria-label="Pagina anterioară">← Anterior</button>
+            <button class="nav-btn" id="games-next" disabled aria-label="Pagina următoare">Următorul →</button>
           </div>
         </div>
         <h2 id="games-heading" class="sr-only">Jocuri</h2>
         <div class="grid" role="group" aria-label="Lista jocurilor" id="games-grid">
           <!-- Games will be populated by JavaScript -->
         </div>
-        <p class="footer-note">Apasă <span class="kbd">tasta spacebar</span> pentru a focaliza. Apasă <span class="kbd">tasta enter</span> pentru a deschide jocul. Folosește butonul înapoi pentru a te întoarce.</p>
+        <p class="footer-note">Apasă <span class="kbd">tasta space</span> pentru a focaliza. Apasă <span class="kbd">tasta enter</span> pentru a deschide jocul. Folosește butonul înapoi pentru a te întoarce.</p>
       </section>
 
       <!-- GENRE FILTER SCREEN -->
@@ -925,7 +925,7 @@
           <div class="controls-left">
             <button class="backbtn" data-target="home">← Înapoi</button>
           </div>
-          <h2 id="system-heading" class="title">System Operations</h2>
+          <h2 id="system-heading" class="title">Operațiuni de sistem</h2>
         </div>
         
         <div class="grid">
@@ -1181,7 +1181,7 @@
 
     // Create app card HTML
     function createAppCard(app, category) {
-      const categoryLabel = category === 'tools' ? 'Tool' : 'Game';
+      const categoryLabel = category === 'tools' ? 'Instrument' : 'Joc';
       const actionLabel = category === 'tools' ? 'Deschide' : 'Joacă';
       
       const hasImage = !!app.image;
@@ -1362,13 +1362,13 @@
       const backBtn = document.getElementById('genre-back-btn');
       
       const genres = getGenres(category);
-      const allGenres = ['All Items', ...genres];
+      const allGenres = ['Toate elementele', ...genres];
       
       grid.innerHTML = allGenres.map((genre, index) => {
         const genreValue = index === 0 ? 'all' : genre;
         return `
           <button class="card-btn genre-btn" data-genre="${genreValue}">
-            <span class="kicker">Filter</span>
+            <span class="kicker">Filtru</span>
             <div class="btn-title">${genre}</div>
             <div class="row">
               <p class="desc">${index === 0 ? 'Arată toate elementele' : `Arată doar elementele de tip ${genre.toLowerCase()}`}</p>
@@ -1378,7 +1378,7 @@
         `;
       }).join('');
       
-      currentFilter.textContent = filterState[category].genre === 'all' ? 'All Items' : filterState[category].genre;
+      currentFilter.textContent = filterState[category].genre === 'all' ? 'Toate elementele' : filterState[category].genre;
       
       // Update back button target
       backBtn.setAttribute('data-target', returnScreen);
@@ -1395,7 +1395,7 @@
           }
           
           const genre = btn.getAttribute('data-genre');
-          const genreName = genre === 'all' ? 'All Items' : genre;
+          const genreName = genre === 'all' ? 'Toate elementele' : genre;
           
           filterState[category].genre = genre;
           filterState[category].page = 0; // Reset to first page
@@ -1480,26 +1480,26 @@
 
       // Apply scan speed
       let autoScan = false;
-      let scanSpeedName = 'Medium';
+      let scanSpeedName = 'Medie';
       
       if (window.NarbeScanManager) {
           const scanSettings = window.NarbeScanManager.getSettings();
           autoScan = scanSettings.autoScan;
           
           // Map index to name
-          const speedNames = ['Fast (1s)', 'Medium (2s)', 'Slow (3s)', 'Super Slow (4s)'];
-          scanSpeedName = speedNames[scanSettings.scanSpeedIndex] || 'Medium (2s)';
+          const speedNames = ['Rapidă (1s)', 'Medie (2s)', 'Lentă (3s)', 'Foarte lentă (4s)'];
+          scanSpeedName = speedNames[scanSettings.scanSpeedIndex] || 'Medie (2s)';
       }
 
       document.getElementById('scanspeed-status').textContent = scanSpeedName;
 
       // Apply auto scan setting
-      document.getElementById('autoscan-status').textContent = autoScan ? 'On' : 'Off';
+      document.getElementById('autoscan-status').textContent = autoScan ? 'Activat' : 'Dezactivat';
       
       // Update autoscan description
       const speedSec = getScanDelay() / 1000;
       const autoScanDesc = document.querySelector('#autoscan-toggle .desc');
-      if(autoScanDesc) autoScanDesc.textContent = `Automatically move focus every ${speedSec} seconds`;
+      if(autoScanDesc) autoScanDesc.textContent = `Mută automat focalizarea la fiecare ${speedSec} ${speedSec === 1 ? 'secundă' : 'secunde'}`;
 
       if (autoScan) {
         // Restart to apply new speed if changed
@@ -1511,7 +1511,7 @@
 
       // Apply TTS status (from voice manager)
       const voiceSettings = window.NarbeVoiceManager.getSettings();
-      document.getElementById('tts-status').textContent = voiceSettings.ttsEnabled ? 'On' : 'Off';
+      document.getElementById('tts-status').textContent = voiceSettings.ttsEnabled ? 'Activat' : 'Dezactivat';
 
       // Apply Voice display (from voice manager)
       updateVoiceDisplay();
@@ -1684,9 +1684,9 @@
         const status = await window.electronAPI.games.getSyncStatus();
         if (status && status.allSyncedAt) {
           const when = new Date(status.allSyncedAt);
-          gamesSyncStatusEl.textContent = `Synced ${when.toLocaleDateString()}`;
+          gamesSyncStatusEl.textContent = `Sincronizat ${when.toLocaleDateString('ro-RO')}`;
         } else {
-          gamesSyncStatusEl.textContent = 'Not synced';
+          gamesSyncStatusEl.textContent = 'Nesincronizat';
         }
       } catch (e) {
         console.log('[Hub] Unable to read games sync status:', e.message);
@@ -1700,26 +1700,26 @@
         return;
       }
       gamesSyncInProgress = true;
-      gamesSyncStatusEl.textContent = 'Syncing...';
-      announce('Syncing games for offline play. This may take a few minutes.');
+      gamesSyncStatusEl.textContent = 'Se sincronizează...';
+      announce('Se sincronizează jocurile pentru utilizare fără internet. Poate dura câteva minute.');
       speak('Sincronizarea jocurilor pentru utilizare fără internet. Acest proces va dura câteva minute.');
 
       window.electronAPI.games.onSyncProgress(({ done, total }) => {
-        if (total) gamesSyncStatusEl.textContent = `Syncing ${done}/${total}...`;
+        if (total) gamesSyncStatusEl.textContent = `Se sincronizează ${done}/${total}...`;
       });
 
       try {
         const result = await window.electronAPI.games.sync();
         if (result && result.success) {
-          announce('Games synced for offline play.');
-          speak('Jocurilor sunt disponibile pentru utilizare fără internet.');
+          announce('Jocurile au fost sincronizate pentru utilizare fără internet.');
+          speak('Jocurile sunt disponibile pentru utilizare fără internet.');
         } else {
-          gamesSyncStatusEl.textContent = 'Sync failed';
-          speak('Sincronizarea jocurilor a esuat. Verifică conexiunea la internet și încearcă din nou.');
+          gamesSyncStatusEl.textContent = 'Sincronizare eșuată';
+          speak('Sincronizarea jocurilor a eșuat. Verifică conexiunea la internet și încearcă din nou.');
         }
       } catch (e) {
-        gamesSyncStatusEl.textContent = 'Sync failed';
-        speak('Sincronizarea jocurilor a esuat. Verifică conexiunea la internet și încearcă din nou.');
+        gamesSyncStatusEl.textContent = 'Sincronizare eșuată';
+        speak('Sincronizarea jocurilor a eșuat. Verifică conexiunea la internet și încearcă din nou.');
       } finally {
         gamesSyncInProgress = false;
         refreshGamesSyncStatus();
@@ -1979,8 +1979,8 @@
     function updateGenreButtonText(category, genre) {
       const btn = document.getElementById(`${category}-genre-toggle`);
       if (btn) {
-        const displayGenre = genre === 'all' ? 'All' : genre;
-        btn.textContent = `Filter: ${displayGenre}`;
+        const displayGenre = genre === 'all' ? 'Toate' : genre;
+        btn.textContent = `Filtru: ${displayGenre}`;
       }
     }
 
@@ -1999,7 +1999,7 @@
       updateGenreButtonText(category, nextGenre);
       renderAppsGrid(category);
       
-      const displayGenre = nextGenre === 'all' ? 'All' : nextGenre;
+      const displayGenre = nextGenre === 'all' ? 'Toate' : nextGenre;
       speak(`Filtrul setat pe ${displayGenre}`);
     }
 

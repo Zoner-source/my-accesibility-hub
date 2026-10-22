@@ -372,8 +372,8 @@ function showMainMenu() {
 
     document.getElementById('status-display').innerText = ""; // Clear status
     
-    renderMenu('menu-container', menus.main, "BENNY'S<br>TIC TAC TOE");
-    speak("Tic Tac Toe al lui Benny. Un jucător");
+    renderMenu('menu-container', menus.main, "X ȘI 0<br>AL LUI BENNY");
+    speak("X și 0 al lui Benny. Un jucător");
     startAutoScan();
 }
 

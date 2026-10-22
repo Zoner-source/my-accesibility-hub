@@ -127,6 +127,17 @@ function categoryDisplayName(catName) {
     return categoryNamesRO[catName] || catName;
 }
 
+// Display names for pack files and game sources. The underlying values stay
+// English because they are file names / persisted settings.
+const packNamesRO = {
+    'Animals': 'Animale',
+    'Miscellaneous': 'Diverse'
+};
+const gameSourceNamesRO = { 'ALL': 'Toate', 'Local': 'Local', 'Online': 'Online' };
+function gameSourceDisplayName(source) {
+    return gameSourceNamesRO[source] || source;
+}
+
 const config = {
     scanHighlightPx: 8,
     spaceDebounce: 200,
@@ -217,6 +228,13 @@ async function init() {
         console.error("Failed to load local registry", e);
     }
     
+    // A saved "Local" source with no local packs would start with no
+    // categories or images at all; fall back to every available pack.
+    if (state.gameSource === 'Local' && state.localPacks.length === 0) {
+        state.gameSource = 'ALL';
+        localStorage.setItem('matchy_game_source', 'ALL');
+    }
+
     // 3. Combine based on Source
     refreshPacks(); // Will populate state.packs and load first 
 
@@ -373,8 +391,7 @@ function categoryToFolderName(catName) {
         'Aqua Teen Hunger Force': 'athf',
         'Family Guy': 'familyguy',
         'South Park': 'southpark',
-        'Futurama': 'futurama',
-        'Jen Hamilton': 'jenhamilton'
+        'Futurama': 'futurama'
     };
     
     if (mappings[catName]) return mappings[catName];
@@ -434,7 +451,8 @@ function getPackTitle() {
     // "packs/adult_cartoons.json" -> "Adult Cartoons" (legacy)
     const parts = filename.split('/');
     const base = parts[parts.length - 1].replace('.json', '');
-    return base.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const title = base.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    return packNamesRO[title] || title;
 }
 
 // Get the folder path for the current pack's assets
@@ -698,7 +716,7 @@ const menus = {
     main: [
         { text: "Un jucător", action: () => showSinglePlayerMenu() },
         { text: "Doi jucători", action: () => showTwoPlayerMenu() },
-        { text: () => `Sursă joc: ${state.gameSource}`, action: () => cycleGameSource(), onPrev: () => cycleGameSource(-1) },
+        { text: () => `Sursă joc: ${gameSourceDisplayName(state.gameSource)}`, action: () => cycleGameSource(), onPrev: () => cycleGameSource(-1) },
         { text: "Încarcă joc personalizat", action: () => showLoadWarning() },
         { text: "Setări", action: () => showSettingsMenu() },
         { text: "Ieșire", action: () => {
@@ -886,7 +904,7 @@ function cycleGameSource(dir = 1) {
     
     refreshPacks();
     renderMenu();
-    speak("Sursă joc: " + state.gameSource);
+    speak("Sursă joc: " + gameSourceDisplayName(state.gameSource));
 }
 
 function refreshPacks() {
@@ -916,9 +934,27 @@ function refreshPacks() {
     
     state.packs = newPacks;
     state.currentPackIndex = 0;
-    
-    // Attempt to load the new first pack
-    loadPack(state.packs[0]).catch(console.error);
+
+    // Attempt to load the new first pack. The menu is usable before the
+    // fetches finish (slow on GitHub Pages), so rebuild the setup lists once
+    // the load completes instead of keeping a partial/empty category list.
+    const loadToken = state.packLoadToken = (state.packLoadToken || 0) + 1;
+    loadPack(state.packs[0]).then(() => {
+        if (loadToken !== state.packLoadToken) return; // superseded by a newer refresh
+        rebuildSetupCategories();
+        if (state.mode === 'menu' && state.menuState === 'setup') {
+            updateSetupMenu();
+            renderMenu();
+        }
+    }).catch(console.error);
+}
+
+function rebuildSetupCategories() {
+    const cats = Object.keys(state.assets.categories || {}).filter(c => c !== 'Unassigned');
+    state.setup.categories = ['All', ...cats];
+    if (state.setup.categoryIndex >= state.setup.categories.length) state.setup.categoryIndex = 0;
+    state.category = state.setup.categories[state.setup.categoryIndex];
+    updateBoardSizes();
 }
 
 function showMainMenu() {
@@ -1156,10 +1192,10 @@ function updateBoardSizes() {
 
     state.setup.boardSizes = [];
     
-    if (availableCount >= 8) state.setup.boardSizes.push({ label: "4x4", id: "4x4", tts: "4 by 4" });
-    if (availableCount >= 10) state.setup.boardSizes.push({ label: "4x5", id: "4x5", tts: "4 by 5" });
-    if (availableCount >= 15) state.setup.boardSizes.push({ label: "5x6", id: "5x6", tts: "5 by 6" });
-    if (availableCount >= 18) state.setup.boardSizes.push({ label: "6x6", id: "6x6", tts: "6 by 6" });
+    if (availableCount >= 8) state.setup.boardSizes.push({ label: "4x4", id: "4x4", tts: "4 pe 4" });
+    if (availableCount >= 10) state.setup.boardSizes.push({ label: "4x5", id: "4x5", tts: "4 pe 5" });
+    if (availableCount >= 15) state.setup.boardSizes.push({ label: "5x6", id: "5x6", tts: "5 pe 6" });
+    if (availableCount >= 18) state.setup.boardSizes.push({ label: "6x6", id: "6x6", tts: "6 pe 6" });
     
     if (state.setup.boardSizes.length === 0) {
         state.setup.boardSizes.push({ label: "Nu sunt suficiente cărți", id: null, tts: "Nu sunt suficiente cărți" });
@@ -1233,7 +1269,7 @@ function renderSetupPreview(hostEl) {
 
     const label = document.createElement('div');
     label.className = 'preview-label';
-    label.innerText = 'Preview';
+    label.innerText = 'Previzualizare';
     hostEl.appendChild(label);
 
     const dims = state.setup.previewDims;
@@ -1282,11 +1318,11 @@ function updateSetupMenu() {
         { 
             text: () => {
                 const b = state.setup.boardSizes[state.setup.boardSizeIndex];
-                return `Mărime tablă: ${b ? b.label : 'N/A'}`;
+                return `Mărime tablă: ${b ? b.label : 'indisponibilă'}`;
             }, 
             tts: () => {
                 const b = state.setup.boardSizes[state.setup.boardSizeIndex];
-                return `Mărime tablă: ${b ? (b.tts || b.label) : 'N/A'}`;
+                return `Mărime tablă: ${b ? (b.tts || b.label) : 'indisponibilă'}`;
             },
             action: () => cycleBoardSize(1),
             onPrev: () => cycleBoardSize(-1)
@@ -1408,7 +1444,7 @@ function startChallengePlusLevel() {
         state.busy = true;
         speak("Ești Campionul Universului! Toate nivelurile completate!");
         const container = document.getElementById('main-content');
-        container.innerHTML = `<div class="win-message" style="color:gold; font-size:48px;">🏆<br>CHAMPION<br>OF THE UNIVERSE</div>`;
+        container.innerHTML = `<div class="win-message" style="color:gold; font-size:48px;">🏆<br>CAMPIONUL<br>UNIVERSULUI</div>`;
         playSystemSound('success');
         setTimeout(showMainMenu, 8000);
         return;
@@ -1649,7 +1685,7 @@ function renderMenu() {
     title.className = 'menu-title';
     
     const titles = {
-        main: "BENNY'S MATCHY MATCH",
+        main: "JOCUL DE MEMORIE AL LUI BENNY",
         singlePlayer: "UN JUCĂTOR",
         twoPlayer: "DOI JUCĂTORI",
         settings: "SETĂRI",
@@ -1676,7 +1712,7 @@ function renderMenu() {
         info.style.textAlign = 'center';
         info.style.padding = '0 20px';
         info.style.maxWidth = '600px';
-        info.innerText = "Upload your assets and/or packs folder to this browser and play your own custom game";
+        info.innerText = "Încarcă în acest browser folderul cu imagini și/sau pachete și joacă propriul tău joc personalizat";
         container.appendChild(info);
     }
 
@@ -1989,7 +2025,7 @@ function startChallengeSequence() {
             state.grid.forEach(cell => cell.revealed = false);
             
             state.challengePhase = 'playing';
-            speak("Start!");
+            speak("Începe!");
             state.busy = false; // Enable input
             renderGame(); // This will bring back the HP bar
         }, revealDuration);

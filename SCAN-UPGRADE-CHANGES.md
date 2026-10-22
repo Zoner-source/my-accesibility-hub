@@ -771,3 +771,36 @@ Validation (Node only; no browser, Electron or GPU on this PC): rally-model 25/2
 ### Follow-up — serve aim covers the whole legal box
 
 Owner feedback: the aim swept only a narrow band near the receiving robot. The target now sweeps the whole diagonal service box (centre line/T to sideline, still never into the other box, which would be a fault) and the serve lands deep, about a metre inside the baseline (model SERVE_DEPTH). The receiving robot waits behind its baseline instead of standing on the target, so wide and T serves make it move. While aiming, the first-person view eases up and zooms toward the far box; the target ring is smaller so it stays inside the lines. Files: model.js, scene.js, game.js, README.md, tests/rally-model.test.cjs (synchronized to the F-drive prototype). Backup of the previous versions: desktop tmp/rally-arm-rebuild-backup/before-serve-aim-wide. Validation: rally-model 25/25, rally-arm-rig 7/7 and rally-game-controls 10/10 on desktop and F-drive copies; serve-aim review renders inspected.
+
+## 2026-10-22 — Romanian UI pass, Matchy Match loading fix, Benny's Dice hidden
+
+Romanian web build only. Remaining English UI text and spoken (TTS) strings on the visible surfaces were translated: Hub, Phrase & Media Board, Keyboard, YouTube, Benny spune, X și 0, Baschetul lui Benny, Jocul de memorie. Title cards now use the Romanian names from game-overrides.json. Scan behavior, timing, controls and gameplay are unchanged.
+
+Matchy Match bug: the menu is usable before the pack JSON files finish downloading. Entering setup during that window stored a category list of only "Toate" with zero cards ("Nu sunt suficiente cărți"), and it never refreshed, so the game started with no categories or images. This happens easily on GitHub Pages. Now each pack load rebuilds the setup categories/board sizes and redraws the setup menu if it is open. A saved "Local" game source with no local packs now falls back to all packs instead of an empty game.
+
+Changed web files (Electron flag: not ported; Romanian web build only, Electron app untouched):
+- bennyshub/index.html — filter/paging/settings/sync labels, aria-labels, scan-speed and On/Off pills, html lang=ro.
+- bennyshub/shared/voice-manager.js — with no saved voice, default to the first Romanian voice; "Implicită" fallback label.
+- bennyshub/apps/tools/tools.json — Phrase board title/description and genres.
+- bennyshub/apps/tools/phraseboard/index.html — header titles, status footer, spoken menu names, sentence bar, delete/clear, media controls, html lang=ro.
+- bennyshub/apps/tools/keyboard/app.js — Settings/Exit key styling matched the old English labels.
+- bennyshub/apps/games/hidden-games.json — removed bennysdice from showOnly and listed it as hidden.
+- bennyshub/apps/games/BENNYSMATCHYMATCH/script.js — pack-load race fix, Local fallback, pack/source display names, board-size TTS, title, preview, victory and custom-game text.
+- bennyshub/apps/games/BENNYSMATCHYMATCH/index.html — page title, html lang=ro.
+- bennyshub/apps/games/BENNYSMATCHYMATCH/packs/influencers/influencers.json — spoken card names (altTitle) only; matching uses title, unchanged.
+- bennyshub/apps/games/BENNYSAYS/index.html, BENNYSTICTACTOE/index.html, BENNYSTICTACTOE/script.js, BENNYSBASKETBALLSHOOTER/index.html — title cards, hint text, html lang=ro.
+- SCAN-UPGRADE-CHANGES.md — this record.
+
+Backup: git HEAD 693287c (clean tree before the change). Validation: Chrome headless against scripts/serve.cjs. All eight visible pages load with no script errors. The Hub lists four games without Dice. With pack fetches delayed 1.5 s and setup opened at 0.8 s, Matchy Match setup recovers to 6 categories and 4 board sizes with a populated preview. In a fresh profile the default voice is Microsoft Andrei (ro-RO). Not tested: a physical switch play test.
+
+### Follow-up — "Cuvintele mele", influencer pack removed, kid-friendly card names
+
+Owner request. The Phrase & Media Board is renamed "Cuvintele mele" (tools.json title, phraseboard page title and header). The Matchy Match influencer pack (packs/influencers, 16 cards with images and audio) is deleted and removed from assetManifest.json; its "Jen Hamilton" folder mapping and pack display name are removed from script.js and editor_new.js. Spoken card names (altTitle only; matching uses title, unchanged) are simpler for children: Țestoasă, Păsărică, Peștișor, Camion, Mașina care ridică lăzi, Mașină cu ladă, Mașina familiei, Barcă, Mașină de curse, Avion rapid, Autobuz, Crin. Every name stays unique so pairs are not confused.
+
+Files (Electron flag: not ported): bennyshub/apps/tools/tools.json, bennyshub/apps/tools/phraseboard/index.html, bennyshub/apps/games/BENNYSMATCHYMATCH/{assetManifest.json, script.js, editor_new.js, packs/animals.json, packs/miscellaneous.json}, deleted bennyshub/apps/games/BENNYSMATCHYMATCH/packs/influencers/, SCAN-UPGRADE-CHANGES.md.
+
+Validation: Chrome headless. Matchy Match loads 2 packs and 4 categories (43 cards) with all board sizes and no 404s or script errors. The Hub lists "Cuvintele mele".
+
+Owner revision, same day: in miscellaneous.json the minivan is now spoken "Mașină". Avion de vânătoare, Stivuitor and Camionetă are restored. The car card is also spoken "Mașină", so two cards that don't match share a spoken name. The owner was told.
+Final owner choice: the minivan (blue in its picture) is spoken "Mașină albastră". The red car stays "Mașină". All spoken names are unique again.
+Owner follow-up: the red car is now spoken "Mașină roșie".

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NARBE Phrase & Media Board</title>
+  <title>Cuvintele mele</title>
   <script src="../../../shared/electron-bridge.js"></script>
   <style>
     :root {
@@ -471,7 +471,7 @@
   <div class="app-container">
     <header>
   <div class="header-inner">
-    <div class="brand">🧡 NARBE Phrase & Media Board</div>
+    <div class="brand">🧡 Cuvintele mele</div>
     <div id="viewTitle" class="header-title">Meniu principal</div>
     <div class="header-right"></div>
   </div>
@@ -491,7 +491,7 @@
       </div>
     </main>
 
-    <footer id="statusFooter">Ready - Load CSV to begin</footer>
+    <footer id="statusFooter">Gata - încarcă un CSV pentru a începe</footer>
   </div>
 
   <div id="iframeModal" role="dialog" aria-modal="true">
@@ -500,13 +500,13 @@
       <iframe id="mediaFrame" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
       <div id="iframeControls">
         <button class="grid-button" id="playPauseBtn">Start/Pauză</button>
-        <button class="grid-button" id="prevBtn">⏮ Înainte</button>
+        <button class="grid-button" id="prevBtn">⏮ Anterior</button>
         <button class="grid-button" id="rewindBtn">Derulare înapoi</button>
         <button class="grid-button" id="forwardBtn">Derulare înainte</button>
-        <button class="grid-button" id="nextBtn">⏭ Urmatorul</button>
+        <button class="grid-button" id="nextBtn">⏭ Următorul</button>
         <button class="grid-button" id="muteBtn">Sunet dezactivat</button>
         <button class="grid-button" id="refreshBtn">Reîmprospătează</button>
-        <button class="grid-button danger-btn" id="closeIframeBtn">Close</button>
+        <button class="grid-button danger-btn" id="closeIframeBtn">Închide</button>
       </div>
     </div>
   </div>
@@ -691,17 +691,17 @@
 function updateHeaderForCurrentView(){
   const t = document.getElementById('viewTitle');
   if(!t) return;
-  let title = 'Main Menu';
+  let title = 'Meniu principal';
   switch(state.currentMenu){
-    case 'main': title = 'Main Menu'; break;
-    case 'categories': title = state.currentBoardTitle || 'Categories'; break;
-    case 'settings': title = 'Settings'; break;
-    case 'gridsize': title = 'Grid Size'; break;
-    case 'tts': title = 'Voice & TTS'; break;
-    case 'scan': title = 'Scan Settings'; break;
-    case 'highlight': title = 'Highlight Colors'; break;
-    case 'theme': title = 'Theme'; break;
-    case 'category': title = state.currentCategory || 'Category'; break;
+    case 'main': title = 'Meniu principal'; break;
+    case 'categories': title = state.currentBoardTitle || 'Categorii'; break;
+    case 'settings': title = 'Setări'; break;
+    case 'gridsize': title = 'Mărime grilă'; break;
+    case 'tts': title = 'Voce și TTS'; break;
+    case 'scan': title = 'Setări scanare'; break;
+    case 'highlight': title = 'Culori de evidențiere'; break;
+    case 'theme': title = 'Temă'; break;
+    case 'category': title = state.currentCategory || 'Categorie'; break;
   }
   t.textContent = title;
 }
@@ -961,7 +961,7 @@ function updateHeaderForCurrentView(){
             
             state.currentBoardTitle = localBoard.name;
             buildIndex(parseCSV(localBoard.csv));
-            el.statusFooter.textContent = `Loaded board: ${localBoard.name}`;
+            el.statusFooter.textContent = `Panou încărcat: ${localBoard.name}`;
           }
         });
       }
@@ -977,7 +977,7 @@ function updateHeaderForCurrentView(){
             if (cleanBoardName) speak(cleanBoardName);
             
             const success = await loadBoard(board.path);
-            el.statusFooter.textContent = success ? `Loaded board: ${board.name}` : `Failed to load board: ${board.name}`;
+            el.statusFooter.textContent = success ? `Panou încărcat: ${board.name}` : `Panoul nu a putut fi încărcat: ${board.name}`;
           }
         });
       });
@@ -1085,7 +1085,7 @@ function updateHeaderForCurrentView(){
         if (catTotalPages > 1) {
           const indicator = document.createElement('div');
           indicator.className = 'page-indicator';
-          indicator.textContent = `${catTotalPages} pages`;
+          indicator.textContent = `${catTotalPages} pagini`;
           btn.appendChild(indicator);
         }
         gridPositions.push({ type: 'category', button: btn });
@@ -1350,7 +1350,7 @@ function updateHeaderForCurrentView(){
           state.currentRow = -1;
           state.scanIndex = -1;
           saveSettings();
-          speak(`Modul de scanare setat pe ${state.userScanPreference}`);
+          speak(`Modul de scanare setat pe ${state.userScanPreference === 'cell' ? 'celulă' : 'rând'}`);
           renderScanMenu(true);
         }, className: 'muted-blue-btn' },
         
@@ -1541,7 +1541,7 @@ function updateHeaderForCurrentView(){
       gridPositions.push({ type: 'back', button: createButton('Înapoi', '←', () => { if (state.page > 0) { state.page--; renderCategory(); } else { navigateBack(); } }, 'back-btn') });
       for (let i = startIdx; i < endIdx; i++) {
         const item = cat.items[i];
-        const btn = createButton(item.display || item.speak || 'Speak', '', () => onTileClick(item));
+        const btn = createButton(item.display || item.speak || 'Vorbește', '', () => onTileClick(item));
         // Store the speak text for scan selection to use
         btn.dataset.speakText = item.speak || item.display || '';
         if (item.image) {
@@ -1646,11 +1646,11 @@ function updateHeaderForCurrentView(){
           if (state.currentMenu === 'tts' && element.classList.contains('voice-btn')) {
             const idx = parseInt(element.dataset.voiceIndex, 10);
             const voice = state.voices[idx];
-            if (voice) { speakWithVoice(`Voice ${idx + 1}`, voice); return; }
+            if (voice) { speakWithVoice(`Vocea ${idx + 1}`, voice); return; }
           }
           let textToSpeak = '';
-          if (element === el.deleteWordBtn && state.sentenceMode) textToSpeak = 'Delete';
-          else if (element === el.clearSentenceBtn && state.sentenceMode) textToSpeak = 'Clear all';
+          if (element === el.deleteWordBtn && state.sentenceMode) textToSpeak = 'Șterge';
+          else if (element === el.clearSentenceBtn && state.sentenceMode) textToSpeak = 'Șterge tot';
           else if (element !== el.sentenceDisplay && element !== el.deleteWordBtn && element !== el.clearSentenceBtn) {
             const pageIndicator = element.querySelector('.page-indicator');
             const cleanText = cleanTextForTTS(element.textContent);
@@ -2099,7 +2099,7 @@ function updateHeaderForCurrentView(){
         const parsedRows = parseCSV(csvText);
         
         // Extract board name from CSV data or use filename
-        let boardName = 'My Custom Board';
+        let boardName = 'Panoul meu personalizat';
         if (parsedRows.length > 0 && parsedRows[0].boardName) {
           boardName = parsedRows[0].boardName;
         } else {
@@ -2116,8 +2116,8 @@ function updateHeaderForCurrentView(){
           localStorage.setItem('narbe_phrase_builder', JSON.stringify(boardData));
           
           // Show success message and re-render main menu
-          el.statusFooter.textContent = `Board "${boardName}" saved! Navigate to it from the main menu.`;
-          speak(`Board ${cleanTextForTTS(boardName)} saved`);
+          el.statusFooter.textContent = `Panoul „${boardName}” a fost salvat! Îl găsești în meniul principal.`;
+          speak(`Panoul ${cleanTextForTTS(boardName)} a fost salvat`);
           
           // Re-render main menu to show the new board
           if (state.currentMenu === 'main') {
@@ -2228,7 +2228,7 @@ function updateHeaderForCurrentView(){
         if (targetBoard) {
            const success = await loadBoard(targetBoard.path);
            if (success) {
-               el.statusFooter.textContent = `Loaded board: ${targetBoard.name}`;
+               el.statusFooter.textContent = `Panou încărcat: ${targetBoard.name}`;
                updateScannable();
                state.currentRow = 0; state.scanIndex = 0;
                setTimeout(() => { updateScannable(); }, 100);
@@ -2241,7 +2241,7 @@ function updateHeaderForCurrentView(){
       renderMainMenu();
       
       if (saved && saved.csv) {
-        el.statusFooter.textContent = `You have a saved board: ${saved.name}`;
+        el.statusFooter.textContent = `Ai un panou salvat: ${saved.name}`;
       }
       
       updateScannable();
@@ -2339,7 +2339,7 @@ function updateHeaderForCurrentView(){
         updateHeaderForCurrentView();
         setTimeout(() => { updateScannable(); }, 50);
       } else {
-        backMessage = 'Main Menu';
+        backMessage = 'Meniu principal';
         openMenu('main');
       }
       
@@ -2358,11 +2358,11 @@ function updateHeaderForCurrentView(){
       switch (menuName) {
         case 'main': 
           renderMainMenu(); 
-          menuTitle = 'Main Menu';
+          menuTitle = 'Meniu principal';
           break;
         case 'categories': 
           renderCategoryMenu(); 
-          menuTitle = state.currentBoardTitle || 'Categories';
+          menuTitle = state.currentBoardTitle || 'Categorii';
           break;
         case 'settings': 
           renderSettingsMenu(); 
@@ -2420,13 +2420,13 @@ function updateHeaderForCurrentView(){
       if (state.sentenceMode) {
         el.sentenceRow.classList.add('active');
         el.mainGrid.classList.add('sentence-active'); // Add class for grid sizing
-        speak('Sentence bar on');
+        speak('Bara de propoziție pornită');
       } else { 
         el.sentenceRow.classList.remove('active'); 
         el.mainGrid.classList.remove('sentence-active'); // Remove class for uniform grid
         state.sentence = []; 
         updateSentenceDisplay();
-        speak('Sentence bar off');
+        speak('Bara de propoziție oprită');
       }
       renderCurrentMenu();
     }
@@ -2549,7 +2549,7 @@ function updateHeaderForCurrentView(){
       state.categories = cats;
       state.byCat = new Map(cats.map(c => [c.name, c]));
       state.csvLoaded = true;
-      el.statusFooter.textContent = `Loaded ${cats.length} categories with ${rows.length} phrases`;
+      el.statusFooter.textContent = `Au fost încărcate ${cats.length} categorii cu ${rows.length} fraze`;
       state.navigationHistory = [];
       openMenu('categories');
     }
@@ -2778,7 +2778,7 @@ function updateHeaderForCurrentView(){
         if (!raw) return null;
         const data = JSON.parse(raw);
         if (!data || !data.csv) return null;
-        return { name: (data.boardName && data.boardName.trim()) || 'My Personal Board', csv: data.csv };
+        return { name: (data.boardName && data.boardName.trim()) || 'Panoul meu personal', csv: data.csv };
       } catch (e) { return null; }
     }
 

@@ -202,9 +202,9 @@
         const btn = document.createElement("button");
         btn.className = "key" + (rIdx === 0 ? " ctrl" : "");
         
-        if (key === "Settings") {
+        if (key === "Setări") {
           btn.classList.add("settings");
-        } else if (key === "Exit") {
+        } else if (key === "Ieșire") {
           btn.classList.add("exit");
         }
         

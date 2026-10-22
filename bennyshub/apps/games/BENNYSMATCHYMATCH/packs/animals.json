@@ -22,7 +22,7 @@
                 "image": "fish.svg",
                 "sound": null,
                 "title": "fish",
-                "altTitle": "Pește",
+                "altTitle": "Peștișor",
                 "ttsText": "",
                 "_created": 1767982256169
             },
@@ -30,7 +30,7 @@
                 "image": "turtle.svg",
                 "sound": null,
                 "title": "turtle",
-                "altTitle": "Broască țestoasă",
+                "altTitle": "Țestoasă",
                 "ttsText": "",
                 "_created": 1767982267557
             },
@@ -46,7 +46,7 @@
                 "image": "bird.png",
                 "sound": null,
                 "title": "bird",
-                "altTitle": "Pasăre",
+                "altTitle": "Păsărică",
                 "ttsText": "",
                 "_created": 1767982293761
             },
