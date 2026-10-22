@@ -867,3 +867,12 @@ Owner report: still no "mama" predictions, learned words unreliable, reverse-sca
 - SCAN-UPGRADE-CHANGES.md — this record.
 
 Electron flag: electron-bridge.js changes shared bridge behavior. It is not ported, and in Electron the parent has electronAPI, so behavior there is unchanged. Validation: Chrome headless, keyboard opened inside the Hub iframe. isElectron false, 343 words, "MAMA" → VINO, TE, AM, UNDE, VREAU. A 60-day-old learned word ranks first. Taps advance one row each. Holding Space steps back after 1,041 ms. A word typed in the Hub is saved to localStorage.
+
+## 2026-10-22 — Emergency (URGENȚĂ) alarm stuttered
+
+Owner report: the alarm sounded laggy ("a-ajutor, a-ajutor"). The System screen's URGENȚĂ button called speak("AJUTOR") 15 times, 400 ms apart. NarbeVoiceManager.speak() cancels any speech in progress, and "AJUTOR" takes about 1.47 s with the Romanian voice (the English "HELP" fit in 400 ms), so each repeat cut the previous one off. Measured on the live site: 14 cut-offs and only the last repeat completed.
+
+- bennyshub/index.html — sysCall('emergency') cancels once, then queues 15 "AJUTOR" utterances with the current voice, rate, pitch and volume, so each plays in full back to back. The 5 s volume-ramp delay and the respect for the TTS on/off setting are unchanged.
+- SCAN-UPGRADE-CHANGES.md — this record.
+
+Electron flag: not ported. Validation: real Chrome with Microsoft Andrei (ro-RO). 0 cut-offs; each repeat runs about 1,470 ms start to end. The full alarm now lasts about 22 s instead of a stuttering ~6 s.

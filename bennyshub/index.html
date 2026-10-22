@@ -2222,11 +2222,23 @@
                 window.electronAPI.system.volumeMax();
             }
             
-            // Say "HELP" rapidly 15x
-            // Start after a 5 second delay to ensure volume has fully increased
+            // Say "AJUTOR" 15x back to back
+            // Start after a 5 second delay to ensure volume has fully increased.
+            // The repeats are queued rather than sent through speak() every 400 ms:
+            // speak() cancels whatever is playing, and "AJUTOR" lasts longer than
+            // 400 ms in Romanian, so each repeat cut the last one off ("a-ajutor").
             setTimeout(() => {
+                const voiceSettings = window.NarbeVoiceManager.getSettings();
+                if (!voiceSettings.ttsEnabled || !('speechSynthesis' in window)) return;
+                const voice = window.NarbeVoiceManager.getCurrentVoice();
+                window.speechSynthesis.cancel();
                 for (let i = 0; i < 15; i++) {
-                    setTimeout(() => speak("AJUTOR"), i * 400); // 400ms spacing for rapid iteration
+                    const utterance = new SpeechSynthesisUtterance("AJUTOR");
+                    if (voice) utterance.voice = voice;
+                    utterance.rate = voiceSettings.rate;
+                    utterance.pitch = voiceSettings.pitch;
+                    utterance.volume = voiceSettings.volume;
+                    window.speechSynthesis.speak(utterance);
                 }
             }, 5000);
             return;
