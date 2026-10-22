@@ -1,0 +1,1856 @@
+{
+ "frequent_words": {
+  "DA": {
+   "count": 1000,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NU": {
+   "count": 998,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EU": {
+   "count": 996,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TU": {
+   "count": 994,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EL": {
+   "count": 992,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EA": {
+   "count": 990,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NOI": {
+   "count": 988,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VOI": {
+   "count": 986,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EI": {
+   "count": 984,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ELE": {
+   "count": 982,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ȘI": {
+   "count": 980,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SAU": {
+   "count": 978,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DAR": {
+   "count": 976,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CĂ": {
+   "count": 974,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ": {
+   "count": 972,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NE": {
+   "count": 970,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TE": {
+   "count": 968,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂ": {
+   "count": 966,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SE": {
+   "count": 964,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎL": {
+   "count": 962,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "O": {
+   "count": 960,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LE": {
+   "count": 958,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LI": {
+   "count": 956,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎMI": {
+   "count": 954,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎȚI": {
+   "count": 952,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎI": {
+   "count": 950,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ESTE": {
+   "count": 948,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUNT": {
+   "count": 946,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "E": {
+   "count": 944,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AM": {
+   "count": 942,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AI": {
+   "count": 940,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ARE": {
+   "count": 938,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AVEM": {
+   "count": 936,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AVEȚI": {
+   "count": 934,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AU": {
+   "count": 932,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FOST": {
+   "count": 930,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FI": {
+   "count": 928,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU": {
+   "count": 926,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREI": {
+   "count": 924,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREA": {
+   "count": 922,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREM": {
+   "count": 920,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREȚI": {
+   "count": 918,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "POT": {
+   "count": 916,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "POȚI": {
+   "count": 914,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "POATE": {
+   "count": 912,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PUTEM": {
+   "count": 910,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AJUTOR": {
+   "count": 908,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VĂ": {
+   "count": 906,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ROG": {
+   "count": 904,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MULȚUMESC": {
+   "count": 898,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MERSI": {
+   "count": 896,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUNĂ": {
+   "count": 894,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SALUT": {
+   "count": 892,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PA": {
+   "count": 890,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BINE": {
+   "count": 888,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "RĂU": {
+   "count": 886,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FOARTE": {
+   "count": 884,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAI": {
+   "count": 882,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MULT": {
+   "count": 880,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PUȚIN": {
+   "count": 878,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ACUM": {
+   "count": 876,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AZI": {
+   "count": 874,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ASTĂZI": {
+   "count": 872,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MÂINE": {
+   "count": 870,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "IERI": {
+   "count": 868,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DIMINEAȚA": {
+   "count": 866,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SEARA": {
+   "count": 864,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NOAPTEA": {
+   "count": 862,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ZIUA": {
+   "count": 860,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ORA": {
+   "count": 858,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TIMP": {
+   "count": 856,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CÂND": {
+   "count": 854,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UNDE": {
+   "count": 852,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CINE": {
+   "count": 850,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CE": {
+   "count": 848,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CUM": {
+   "count": 846,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DE": {
+   "count": 844,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CÂT": {
+   "count": 842,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CÂTE": {
+   "count": 840,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CARE": {
+   "count": 838,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LA": {
+   "count": 834,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎN": {
+   "count": 832,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PE": {
+   "count": 830,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CU": {
+   "count": 828,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DIN": {
+   "count": 826,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PENTRU": {
+   "count": 824,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LÂNGĂ": {
+   "count": 822,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUB": {
+   "count": 820,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PESTE": {
+   "count": 818,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FĂRĂ": {
+   "count": 816,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DESPRE": {
+   "count": 814,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PÂNĂ": {
+   "count": 812,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DUPĂ": {
+   "count": 810,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎNAINTE": {
+   "count": 808,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ACASĂ": {
+   "count": 806,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AICI": {
+   "count": 804,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ACOLO": {
+   "count": 802,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAMA": {
+   "count": 800,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TATA": {
+   "count": 798,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FRATE": {
+   "count": 796,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SORĂ": {
+   "count": 794,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUNICA": {
+   "count": 792,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUNICUL": {
+   "count": 790,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FAMILIA": {
+   "count": 788,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PRIETEN": {
+   "count": 786,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PRIETENA": {
+   "count": 784,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DOCTOR": {
+   "count": 782,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ASISTENTA": {
+   "count": 780,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PROFESOARA": {
+   "count": 778,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "APĂ": {
+   "count": 776,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUC": {
+   "count": 774,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LAPTE": {
+   "count": 772,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CEAI": {
+   "count": 770,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CAFEA": {
+   "count": 768,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PÂINE": {
+   "count": 766,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MÂNCARE": {
+   "count": 764,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUPĂ": {
+   "count": 762,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CIORBĂ": {
+   "count": 760,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CARNE": {
+   "count": 758,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PUI": {
+   "count": 756,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PEȘTE": {
+   "count": 754,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "OUĂ": {
+   "count": 752,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BRÂNZĂ": {
+   "count": 750,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FRUCTE": {
+   "count": 748,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂR": {
+   "count": 746,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BANANĂ": {
+   "count": 744,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PORTOCALĂ": {
+   "count": 742,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PRĂJITURĂ": {
+   "count": 740,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CIOCOLATĂ": {
+   "count": 738,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BISCUIȚI": {
+   "count": 736,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎNGHEȚATĂ": {
+   "count": 734,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PIZZA": {
+   "count": 732,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CARTOFI": {
+   "count": 730,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "OREZ": {
+   "count": 728,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PASTE": {
+   "count": 726,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LEGUME": {
+   "count": 724,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SALATĂ": {
+   "count": 722,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂNÂNC": {
+   "count": 720,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BEAU": {
+   "count": 718,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DORM": {
+   "count": 716,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MERG": {
+   "count": 714,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "STAU": {
+   "count": 712,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VIN": {
+   "count": 710,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PLEC": {
+   "count": 708,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "JOC": {
+   "count": 706,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CITESC": {
+   "count": 704,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SCRIU": {
+   "count": 702,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ASCULT": {
+   "count": 700,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VĂD": {
+   "count": 698,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AUD": {
+   "count": 696,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SIMT": {
+   "count": 694,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ȘTIU": {
+   "count": 692,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CRED": {
+   "count": 690,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VORBESC": {
+   "count": 688,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂNÂNCE": {
+   "count": 686,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BEA": {
+   "count": 684,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DOARME": {
+   "count": 682,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MERGE": {
+   "count": 680,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "JOACĂ": {
+   "count": 678,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FACE": {
+   "count": 676,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FAC": {
+   "count": 674,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FACI": {
+   "count": 672,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SPUNE": {
+   "count": 670,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SPUN": {
+   "count": 668,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ZICE": {
+   "count": 666,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DAU": {
+   "count": 664,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "IAU": {
+   "count": 662,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PUN": {
+   "count": 660,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ARĂT": {
+   "count": 658,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CAUT": {
+   "count": 656,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "GĂSESC": {
+   "count": 654,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DOARE": {
+   "count": 652,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DOR": {
+   "count": 650,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MI-E": {
+   "count": 648,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FOAME": {
+   "count": 646,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SETE": {
+   "count": 644,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FRIG": {
+   "count": 642,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CALD": {
+   "count": 640,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SOMN": {
+   "count": 638,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FRICĂ": {
+   "count": 636,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "RUȘINE": {
+   "count": 634,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DURERE": {
+   "count": 632,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BOLNAV": {
+   "count": 630,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "OBOSIT": {
+   "count": 628,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "OBOSITĂ": {
+   "count": 626,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FERICIT": {
+   "count": 624,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FERICITĂ": {
+   "count": 622,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TRIST": {
+   "count": 620,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TRISTĂ": {
+   "count": 618,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUPĂRAT": {
+   "count": 616,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUPĂRATĂ": {
+   "count": 614,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUCUROS": {
+   "count": 612,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUCUROASĂ": {
+   "count": 610,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NERVOS": {
+   "count": 608,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LINIȘTIT": {
+   "count": 606,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CURAJ": {
+   "count": 604,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CAP": {
+   "count": 602,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BURTĂ": {
+   "count": 600,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SPATE": {
+   "count": 598,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PICIOR": {
+   "count": 596,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PICIOARE": {
+   "count": 594,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MÂNA": {
+   "count": 592,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MÂINI": {
+   "count": 590,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "OCHI": {
+   "count": 588,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "URECHE": {
+   "count": 586,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "GÂT": {
+   "count": 584,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DINTE": {
+   "count": 582,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DINȚI": {
+   "count": 580,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NAS": {
+   "count": 578,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "GURĂ": {
+   "count": 576,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "INIMA": {
+   "count": 574,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TOALETĂ": {
+   "count": 572,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BAIE": {
+   "count": 570,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PAT": {
+   "count": 568,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CAMERA": {
+   "count": 566,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUCĂTĂRIE": {
+   "count": 564,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MASĂ": {
+   "count": 562,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SCAUN": {
+   "count": 560,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FEREASTRA": {
+   "count": 558,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UȘA": {
+   "count": 556,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LUMINA": {
+   "count": 554,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TELEVIZOR": {
+   "count": 552,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TELEFON": {
+   "count": 550,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TABLETĂ": {
+   "count": 548,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CALCULATOR": {
+   "count": 546,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MUZICĂ": {
+   "count": 544,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FILM": {
+   "count": 542,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DESENE": {
+   "count": 540,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CARTE": {
+   "count": 538,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "POVESTE": {
+   "count": 536,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "JOCURI": {
+   "count": 532,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MINGE": {
+   "count": 530,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AFARĂ": {
+   "count": 528,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PARC": {
+   "count": 526,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAGAZIN": {
+   "count": 524,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ȘCOALĂ": {
+   "count": 522,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SPITAL": {
+   "count": 520,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MAȘINA": {
+   "count": 518,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AUTOBUZ": {
+   "count": 516,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PLIMBARE": {
+   "count": 514,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VACANȚĂ": {
+   "count": 512,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CASĂ": {
+   "count": 510,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "GRĂDINĂ": {
+   "count": 508,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CÂINE": {
+   "count": 506,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PISICĂ": {
+   "count": 504,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PLACE": {
+   "count": 500,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NU-MI": {
+   "count": 498,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "IUBESC": {
+   "count": 494,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AJUTĂ-MĂ": {
+   "count": 480,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AȘTEAPTĂ": {
+   "count": 478,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "STOP": {
+   "count": 476,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "GATA": {
+   "count": 474,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎNCĂ": {
+   "count": 472,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "IAR": {
+   "count": 470,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ALT": {
+   "count": 468,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ALTĂ": {
+   "count": 466,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ALTCEVA": {
+   "count": 464,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NIMIC": {
+   "count": 462,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TOT": {
+   "count": 460,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TOTUL": {
+   "count": 458,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TOȚI": {
+   "count": 456,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TOATE": {
+   "count": 454,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NIMENI": {
+   "count": 452,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CINEVA": {
+   "count": 450,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CEVA": {
+   "count": 448,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UNDEVA": {
+   "count": 446,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MEREU": {
+   "count": 444,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NICIODATĂ": {
+   "count": 442,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UNU": {
+   "count": 438,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DOI": {
+   "count": 436,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TREI": {
+   "count": 434,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PATRU": {
+   "count": 432,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CINCI": {
+   "count": 430,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ȘASE": {
+   "count": 428,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ȘAPTE": {
+   "count": 426,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "OPT": {
+   "count": 424,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NOUĂ": {
+   "count": 422,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ZECE": {
+   "count": 420,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ROȘU": {
+   "count": 418,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ALBASTRU": {
+   "count": 416,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VERDE": {
+   "count": 414,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "GALBEN": {
+   "count": 412,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NEGRU": {
+   "count": 410,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ALB": {
+   "count": 408,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MOV": {
+   "count": 406,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ROZ": {
+   "count": 404,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PORTOCALIU": {
+   "count": 402,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MARE": {
+   "count": 400,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MIC": {
+   "count": 398,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MICĂ": {
+   "count": 396,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NOU": {
+   "count": 394,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VECHI": {
+   "count": 392,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FRUMOS": {
+   "count": 390,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FRUMOASĂ": {
+   "count": 388,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUN": {
+   "count": 386,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "GREU": {
+   "count": 382,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UȘOR": {
+   "count": 380,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "REPEDE": {
+   "count": 378,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎNCET": {
+   "count": 376,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUS": {
+   "count": 374,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "JOS": {
+   "count": 372,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "STÂNGA": {
+   "count": 370,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DREAPTA": {
+   "count": 368,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎNĂUNTRU": {
+   "count": 366,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "APROAPE": {
+   "count": 364,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DEPARTE": {
+   "count": 362,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DACĂ": {
+   "count": 352,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ATUNCI": {
+   "count": 350,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DECI": {
+   "count": 348,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PROBABIL": {
+   "count": 346,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SIGUR": {
+   "count": 344,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NOAPTE": {
+   "count": 320,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "REVEDERE": {
+   "count": 314,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EȘTI": {
+   "count": 306,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SCUZE": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PARE": {
+   "count": 296,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "FELICITĂRI": {
+   "count": 292,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MULȚI": {
+   "count": 288,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ANI": {
+   "count": 286,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "POFTĂ": {
+   "count": 284,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂNĂTATE": {
+   "count": 280,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SCHIMBĂ": {
+   "count": 278,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎNTOARCE": {
+   "count": 276,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DESCHIDE": {
+   "count": 274,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎNCHIDE": {
+   "count": 272,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PORNEȘTE": {
+   "count": 270,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "OPREȘTE": {
+   "count": 268,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "REPETĂ": {
+   "count": 266,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎNCEARCĂ": {
+   "count": 264,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VINO": {
+   "count": 262,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "HAI": {
+   "count": 260,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SPUNE-MI": {
+   "count": 258,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NEVOIE": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UN": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CAPUL": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BURTA": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SPATELE": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AJUȚI": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ASTA": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MERGEM": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CANALUL": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TELEVIZORUL": {
+   "count": 100,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  }
+ },
+ "bigrams": {
+  "AM NEVOIE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NEVOIE DE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DE AJUTOR": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DE APĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NEVOIE LA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LA TOALETĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU SĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ MĂNÂNC": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ BEAU": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BEAU APĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ DORM": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ MERG": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MERG AFARĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MERG ACASĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ MĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂ JOC": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ VĂD": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VĂD UN": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UN FILM": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ ASCULT": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ASCULT MUZICĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NU VREAU": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂ DOARE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DOARE CAPUL": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DOARE BURTA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DOARE SPATELE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MI-E FOAME": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MI-E SETE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MI-E FRIG": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MI-E CALD": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MI-E SOMN": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MI-E FRICĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TE IUBESC": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "IUBESC MAMA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "IUBESC TATA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MULȚUMESC FRUMOS": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TE ROG": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ROG FRUMOS": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VĂ ROG": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUNĂ ZIUA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUNĂ DIMINEAȚA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "BUNĂ SEARA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NOAPTE BUNĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LA REVEDERE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CE FACI": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CUM EȘTI": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EU SUNT": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUNT BINE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUNT OBOSIT": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SUNT FERICIT": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NU ȘTIU": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NU POT": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎMI PARE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PARE RĂU": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎMI PLACE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "PLACE MULT": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NU-MI PLACE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "POȚI SĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂ AJUȚI": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VINO AICI": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AICI TE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CE ESTE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ESTE ASTA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UNDE ESTE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ESTE MAMA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ESTE TATA": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CÂND MERGEM": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MERGEM ACASĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SCHIMBĂ CANALUL": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CANALUL TE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DESCHIDE TELEVIZORUL": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TELEVIZORUL TE": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "POFTĂ BUNĂ": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LA MULȚI": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MULȚI ANI": {
+   "count": 200,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  }
+ },
+ "trigrams": {
+  "AM NEVOIE DE": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NEVOIE DE AJUTOR": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NEVOIE DE APĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AM NEVOIE LA": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NEVOIE LA TOALETĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU SĂ MĂNÂNC": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU SĂ BEAU": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ BEAU APĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU SĂ DORM": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU SĂ MERG": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ MERG AFARĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ MERG ACASĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU SĂ MĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ MĂ JOC": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU SĂ VĂD": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ VĂD UN": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VĂD UN FILM": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VREAU SĂ ASCULT": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ ASCULT MUZICĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "NU VREAU SĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂ DOARE CAPUL": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂ DOARE BURTA": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "MĂ DOARE SPATELE": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TE IUBESC MAMA": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TE IUBESC TATA": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TE ROG FRUMOS": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VĂ ROG FRUMOS": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EU SUNT BINE": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EU SUNT OBOSIT": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "EU SUNT FERICIT": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎMI PARE RĂU": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "ÎMI PLACE MULT": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "POȚI SĂ MĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SĂ MĂ AJUȚI": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "VINO AICI TE": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "AICI TE ROG": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CE ESTE ASTA": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UNDE ESTE MAMA": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "UNDE ESTE TATA": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CÂND MERGEM ACASĂ": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "SCHIMBĂ CANALUL TE": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "CANALUL TE ROG": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "DESCHIDE TELEVIZORUL TE": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "TELEVIZORUL TE ROG": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  },
+  "LA MULȚI ANI": {
+   "count": 300,
+   "last_used": "2025-01-01T00:00:00.000Z"
+  }
+ }
+}

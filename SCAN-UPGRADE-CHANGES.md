@@ -804,3 +804,17 @@ Validation: Chrome headless. Matchy Match loads 2 packs and 4 categories (43 car
 Owner revision, same day: in miscellaneous.json the minivan is now spoken "Mașină". Avion de vânătoare, Stivuitor and Camionetă are restored. The car card is also spoken "Mașină", so two cards that don't match share a spoken name. The owner was told.
 Final owner choice: the minivan (blue in its picture) is spoken "Mașină albastră". The red car stays "Mașină". All spoken names are unique again.
 Owner follow-up: the red car is now spoken "Mașină roșie".
+
+## 2026-10-22 — Keyboard word predictions and learning on the web
+
+Owner report: the keyboard no longer remembered words or suggested any. In the browser, predictions.js fetched the vocabulary from the site-root path /shared/predictive_ngrams.json. That path 404s under GitHub Pages (/my-accesibility-hub/) and under scripts/serve.cjs, so 0 words loaded. Learned words were only POSTed to /api/save_prediction and /api/save_ngram, which no server in this repo handles, so they were lost on reload. That file is also a 10 MB English corpus, and the Romanian keyboard has no K/Q/W/X/Y keys.
+
+Fix (browser path only; the Electron IPC path is unchanged): load a Romanian base vocabulary from the relative ro_predictions.json (342 words, 75 bigrams, 45 trigrams of everyday/AAC phrases, dated in the past so typed words rank first). Every word or n-gram learned while typing, choosing a prediction or speaking 3 times is stored in localStorage (kb_learned_predictions) and merged back on load. Letter predictions only offer letters that exist on the keyboard; the default starters are Romanian.
+
+Changed web files (Electron flag: not ported; Electron keeps its IPC storage):
+- bennyshub/apps/tools/keyboard/predictions.js — relative Romanian vocabulary, localStorage learning, keyboard-only letters.
+- bennyshub/apps/tools/keyboard/ro_predictions.json — new, generated.
+- scripts/build-keyboard-ro-predictions.cjs — new generator for the vocabulary above.
+- SCAN-UPGRADE-CHANGES.md — this record.
+
+Validation: Chrome headless against scripts/serve.cjs. 342 words load with no 404s. "CA" suggests CARE, CAFEA, CARNE…; "MĂ DOARE " suggests CAPUL, BURTA, SPATELE. "ZORRO" typed with the on-screen keys is stored, and after a reload "ZO" suggests ZORRO. Not changed: the Journal still reads the English web_keyboard_predictions.json.
