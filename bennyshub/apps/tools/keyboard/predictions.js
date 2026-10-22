@@ -76,7 +76,7 @@ class PredictionSystem {
       } else {
         // Browser: Romanian base vocabulary (relative path, so it works under
         // any GitHub Pages sub-path), then the words learned on this device.
-        const response = await fetch('ro_predictions.json');
+        const response = await fetch('ro_predictions.json?v=20261022c');
         if (response.ok) {
           this.data = await response.json();
         }

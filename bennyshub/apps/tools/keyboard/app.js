@@ -134,6 +134,8 @@
 
   function setBuffer(txt) {
     buffer = txt;
+    // Keep the written text across reloads/sessions (restored in init()).
+    try { localStorage.setItem("kb_text", buffer); } catch (e) {}
     // Use innerHTML with a wrapper span so text and cursor flow together when wrapping
     // Only convert trailing space to &nbsp; so it's visible, keep other spaces for word wrap
     let escapedText = buffer
@@ -1504,7 +1506,9 @@
     renderKeyboard();
     
     console.log('Setting initial buffer...');
-    setBuffer("");
+    let savedText = "";
+    try { savedText = localStorage.getItem("kb_text") || ""; } catch (e) {}
+    setBuffer(savedText);
     
     // Wait for prediction system to initialize
     const initPredictions = () => {

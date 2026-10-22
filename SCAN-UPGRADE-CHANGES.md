@@ -844,3 +844,14 @@ Owner report: no predictions after typing "mama". Once the current word was a co
 - SCAN-UPGRADE-CHANGES.md — this record.
 
 Electron flag: not ported. Validation: Chrome headless. "MAMA" typed by switch (80 ms presses) suggests VINO, TE, AM, UNDE, VREAU, MI-E. Selecting VINO with long-Enter → Enter → Enter gives "MAMA VINO " and then suggests AICI. Partial words still complete as before ("Ma" → MAI, MAMA, MASĂ…).
+
+## 2026-10-22 — Keyboard keeps its text between sessions; cache-busting
+
+Owner report: the written text reset on every reload, and the "mama" suggestions were not visible. The live files were correct: a fresh browser shows VINO, TE, AM, UNDE, VREAU, MI-E. The owner's browser was still using copies cached during today's rapid pushes (GitHub Pages sends max-age=600).
+
+- bennyshub/apps/tools/keyboard/app.js — setBuffer() saves the text to localStorage (kb_text), and init() restores it. "Șterge tot" clears it, so the empty state also persists.
+- bennyshub/apps/tools/keyboard/index.html — ?v=20261022c version tags on style.css, voice-manager.js, scan-manager.js, predictions.js and app.js. Bump the tag whenever these files change.
+- bennyshub/apps/tools/keyboard/predictions.js — the same version tag on ro_predictions.json.
+- SCAN-UPGRADE-CHANGES.md — this record.
+
+Electron flag: not ported. Validation: Chrome headless. "MAMA VINO " typed by switch survives a reload with suggestions (AICI…); after Șterge tot and a reload the bar is empty. All versioned assets load.
