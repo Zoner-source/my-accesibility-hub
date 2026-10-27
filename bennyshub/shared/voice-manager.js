@@ -10,8 +10,11 @@
 window.NarbeVoiceManager = (function() {
   'use strict';
 
-  // Storage key for voice settings (localStorage fallback)
-  const STORAGE_KEY = 'narbe-voice-settings';
+  // Storage key for voice settings (localStorage fallback). Per language: the
+  // Romanian and Hungarian Hubs share the zoner-source.github.io origin, and one
+  // key let each overwrite the other's voice (Romanian then spoke with an
+  // English voice). The 'narbe-voice-settings-*' postMessage types are unchanged.
+  const STORAGE_KEY = 'narbe-voice-settings-ro';
   
   // Check if running in Electron
   const isElectron = !!(window.electronAPI && window.electronAPI.voice);
@@ -169,6 +172,12 @@ window.NarbeVoiceManager = (function() {
           settings.voiceIndex = savedVoiceIndex;
           console.log(`NarbeVoiceManager: Restored voice "${settings.voiceName}" at index ${savedVoiceIndex}`);
         } else {
+          // The saved voice is not on this device: fall back to a Romanian
+          // voice rather than whichever voice happens to sit at the old index.
+          const romanianIndex = englishVoices.findIndex(voice =>
+            voice.lang.toLowerCase().startsWith('ro') || voice.name.toLowerCase().includes('romanian')
+          );
+          if (romanianIndex >= 0) settings.voiceIndex = romanianIndex;
           console.warn(`NarbeVoiceManager: Saved voice "${settings.voiceName}" not found, using index ${settings.voiceIndex}`);
         }
       } else {
