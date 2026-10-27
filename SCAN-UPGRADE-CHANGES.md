@@ -876,3 +876,16 @@ Owner report: the alarm sounded laggy ("a-ajutor, a-ajutor"). The System screen'
 - SCAN-UPGRADE-CHANGES.md — this record.
 
 Electron flag: not ported. Validation: real Chrome with Microsoft Andrei (ro-RO). 0 cut-offs; each repeat runs about 1,470 ms start to end. The full alarm now lasts about 22 s instead of a stuttering ~6 s.
+
+## 2026-10-27 — Keyboard learns a word when the text is spoken; picture buttons on the main menu
+
+Owner report: after typing "VLAD" repeatedly, it never appeared among the suggestions for "V". A word was learned only when Space followed it. Speaking the text counted only after 3 speaks with no edit in between, because setBuffer() resets the count. So the usual flow (type "VLAD", speak it, Șterge tot) never learned anything. Reproduced in Chrome: nothing was stored and "V" did not suggest VLAD.
+
+- bennyshub/apps/tools/keyboard/app.js — learnLastWord() takes over the Space learning code, unchanged. New learnSpokenWord(): the first time a text is spoken (textbar scan selection or click), its last word is learned if Space didn't follow it. A word typed and then cleared without speaking is still not learned, so typos aren't saved.
+- bennyshub/apps/tools/keyboard/index.html — app.js version tag → ?v=20261027a.
+- bennyshub/index.html — the four main-menu buttons show a Twemoji picture (.menu-icon) instead of the .btn-title text. aria-label keeps the spoken names (Instrumente, Jocuri, Setări, Setările sistemului). data-target and the Deschide/Configurează pills are unchanged. A light drop-shadow outline keeps the dark controller and gear visible on dark themes.
+- bennyshub/images/menu/instrumente.svg, jocuri.svg, setari.svg, sistem.svg — new. Twemoji 1f9f0, 1f3ae, 2699 and 1f5a5 (CC BY 4.0), checked to contain no scripts.
+- bennyshub/images/menu/ATTRIBUTION.md — new. The Twemoji credit.
+- SCAN-UPGRADE-CHANGES.md — this record.
+
+Electron flag: not ported. Validation: real Chrome. Inside the Hub iframe, typing VLAD, speaking it and clearing it twice gives "V" → VLAD, VOI, VREAU, and VLAD survives a reload (standalone). Space learning is unchanged. Hub scan says Instrumente, Jocuri, Setări, Setările sistemului. Images render at 1366×768 and 390×844 with no page errors.

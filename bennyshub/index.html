@@ -343,6 +343,15 @@
         margin-bottom: 12px;
     }
 
+    #screen-home .menu-icon {
+        width: min(60%, 220px);
+        max-height: 60%;
+        object-fit: contain;
+        /* Light outline keeps dark emoji (controller, gear) visible on dark themes */
+        filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff) drop-shadow(0 0 6px rgba(255,255,255,.35));
+        margin-bottom: 12px;
+    }
+
     #screen-home .card-btn .row {
         justify-content: center;
     }
@@ -728,29 +737,29 @@
       <section id="screen-home" class="screen active" aria-labelledby="home-heading" data-screen="home" tabindex="-1">
         <h2 id="home-heading" class="sr-only">Meniu principal</h2>
         <div class="grid" role="group" aria-label="Butoanele meniului principal">
-          <button class="card-btn nav" data-target="tools">
-            <div class="btn-title">Instrumente</div>
+          <button class="card-btn nav" data-target="tools" aria-label="Instrumente">
+            <img src="images/menu/instrumente.svg" alt="" class="menu-icon">
             <div class="row">
               <span class="pill">Deschide</span>
             </div>
           </button>
 
-          <button class="card-btn nav" data-target="games">
-            <div class="btn-title">Jocuri</div>
+          <button class="card-btn nav" data-target="games" aria-label="Jocuri">
+            <img src="images/menu/jocuri.svg" alt="" class="menu-icon">
             <div class="row">
               <span class="pill">Deschide</span>
             </div>
           </button>
 
-          <button class="card-btn nav" data-target="settings">
-            <div class="btn-title">Setări</div>
+          <button class="card-btn nav" data-target="settings" aria-label="Setări">
+            <img src="images/menu/setari.svg" alt="" class="menu-icon">
             <div class="row">
               <span class="pill">Deschide</span>
             </div>
           </button>
 
-          <button class="card-btn nav" data-target="system">
-            <div class="btn-title">Setările sistemului</div>
+          <button class="card-btn nav" data-target="system" aria-label="Setările sistemului">
+            <img src="images/menu/sistem.svg" alt="" class="menu-icon">
             <div class="row">
               <span class="pill">Configurează</span>
             </div>

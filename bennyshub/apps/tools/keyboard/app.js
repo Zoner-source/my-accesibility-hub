@@ -525,6 +525,7 @@
         if (text) {
           speak(text);
           ttsUseCount++;
+          learnSpokenWord();
           console.log(`TTS use count: ${ttsUseCount} for text: "${text}"`);
           
           if (ttsUseCount >= 3) {
@@ -1367,28 +1368,33 @@
       if (!prev || /\s/.test(prev)) k = k.toUpperCase();
     }
 
-    if (k === " ") {
-      const currentText = buffer.replace('|', '').trim();
-      const words = currentText.split(' ');
-      if (words.length > 0) {
-        const lastWord = words[words.length - 1];
-        if (lastWord && lastWord.length > 0 && window.predictionSystem) {
-          try {
-            window.predictionSystem.recordLocalWord(lastWord);
-            console.log(`Auto-learned word: ${lastWord}`);
-            
-            if (words.length > 1) {
-              const context = words.slice(0, -1).join(' ');
-              window.predictionSystem.recordNgram(context, lastWord);
-            }
-          } catch (e) {
-            console.error('Error recording word:', e);
-          }
-        }
-      }
-    }
-    
+    if (k === " ") learnLastWord();
+
     setBuffer(buffer + k);
+  }
+
+  // Learn the last word in the buffer (and its context) as a finished word.
+  function learnLastWord() {
+    const words = buffer.replace(/\|/g, '').trim().split(' ');
+    const lastWord = words[words.length - 1];
+    if (!lastWord || !window.predictionSystem) return;
+    try {
+      window.predictionSystem.recordLocalWord(lastWord);
+      console.log(`Auto-learned word: ${lastWord}`);
+
+      if (words.length > 1) {
+        const context = words.slice(0, -1).join(' ');
+        window.predictionSystem.recordNgram(context, lastWord);
+      }
+    } catch (e) {
+      console.error('Error recording word:', e);
+    }
+  }
+
+  // Speaking the text finishes its last word even without a Space ("VLAD" -> speak -> clear).
+  // Only once per text: ttsUseCount resets whenever the buffer changes.
+  function learnSpokenWord() {
+    if (ttsUseCount === 1 && !/\s$/.test(buffer)) learnLastWord();
   }
 
   function saveTextToPredictive(text) {
@@ -1437,8 +1443,9 @@
       window.NarbeVoiceManager.speakProcessed(text);
       
       ttsUseCount++;
+      learnSpokenWord();
       console.log(`TTS use count: ${ttsUseCount} for text: "${text}"`);
-      
+
       if (ttsUseCount >= 3) {
         console.log("3x TTS usage detected - recording words with high priority");
         saveTextToPredictive(text);
