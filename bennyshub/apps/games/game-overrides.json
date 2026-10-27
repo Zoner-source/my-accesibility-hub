@@ -2,25 +2,45 @@
     "bennysays": {
         "title": "Benny spune",
         "description": "Ascultă indicațiile lui Benny și reprodu ordinea",
-        "genres": ["Ritm", "Memorie"]
+        "genres": [
+            "Ritm",
+            "Memorie"
+        ]
     },
     "bennysbasketball": {
         "title": "Baschetul lui Benny",
         "description": "Țintește și aruncă mingea în coș",
-        "genres": ["Acuratețe", "Îndemânare"]
+        "genres": [
+            "Acuratețe",
+            "Îndemânare"
+        ]
     },
     "bennysmatchymatch": {
-    "title": "Jocul de memorie al lui Benny",
-    "description": "Memorează imaginile și fă corespondența",
-    "genres": ["Memorie", "Clasic"]
-},
+        "title": "Jocul de memorie al lui Benny",
+        "description": "Memorează imaginile și fă corespondența",
+        "genres": [
+            "Memorie",
+            "Clasic"
+        ]
+    },
     "bennystictactoe": {
-    "title": "X și 0 al lui Benny",
-    "description": "Joacă X și 0 împotriva calculatorului sau împotriva prietenilor tăi.",
-    "genres": ["Strategie", "Clasic"]
-  },
+        "title": "X și 0 al lui Benny",
+        "description": "Joacă X și 0 împotriva calculatorului sau împotriva prietenilor tăi.",
+        "genres": [
+            "Strategie",
+            "Clasic"
+        ]
+    },
     "bennysdice": {
-    "title": "Zarurile lui Benny",
-    "description": "Un joc de zaruri 3D cu fizică realistă!"
-  }
+        "title": "Zarurile lui Benny",
+        "description": "Un joc de zaruri 3D cu fizică realistă!"
+    },
+    "narbeanimalfriends": {
+        "title": "Animale prietenoase",
+        "description": "Un joc colorat de-a v-ați ascunselea cu animale: apasă un buton, ușile se deschid și un animal iese să te salute. Fără scor, fără cronometru, nu poți pierde.",
+        "genres": [
+            "Interactiv",
+            "Educativ"
+        ]
+    }
 }
