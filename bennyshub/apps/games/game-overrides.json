@@ -42,5 +42,13 @@
             "Interactiv",
             "Educativ"
         ]
+    },
+    "narbefeelings": {
+        "title": "Sentimente",
+        "description": "Cine este trist? Din trei fețe, alege fața care arată sentimentul. Fără scor, fără cronometru, nu poți pierde.",
+        "genres": [
+            "Educativ",
+            "Sentimente"
+        ]
     }
 }
