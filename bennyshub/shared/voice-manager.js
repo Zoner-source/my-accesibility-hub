@@ -157,7 +157,15 @@ window.NarbeVoiceManager = (function() {
 
       // Restore voice by name — try exact match first, then fuzzy on the first
       // word after "Microsoft" so "Microsoft George" matches "Microsoft George Desktop - English (United Kingdom)".
-      if (settings.voiceName) {
+      // A voice the user picked (cycleVoice sets voiceChosen) is restored by
+      // name. A voice saved automatically is not trusted: Chrome lists its
+      // voices in stages, so on a first load the Romanian voice may not be in
+      // the list yet and an English voice gets saved. Until the user picks one,
+      // the Romanian voice wins whenever it is there.
+      const hasRomanian = englishVoices.some(voice =>
+        voice.lang.toLowerCase().startsWith('ro') || voice.name.toLowerCase().includes('romanian')
+      );
+      if (settings.voiceName && (settings.voiceChosen || !hasRomanian)) {
         let savedVoiceIndex = englishVoices.findIndex(voice => voice.name === settings.voiceName);
         if (savedVoiceIndex < 0) {
           const m = settings.voiceName.match(/microsoft\s+(\w+)/i);
@@ -349,6 +357,17 @@ window.NarbeVoiceManager = (function() {
    * Get the current voice object
    */
   function getCurrentVoice() {
+    // The chosen voice by NAME first. Indexes differ between frames: an app
+    // inside the Hub can list the same voices in another order (Chrome adds
+    // its online Google voices at different times), so the Hub's index could
+    // point at a different, possibly silent, voice in the app.
+    if (settings.voiceName && englishVoices.length > 0) {
+      const byName = englishVoices.findIndex(voice => voice.name === settings.voiceName);
+      if (byName >= 0) {
+        settings.voiceIndex = byName;
+        return englishVoices[byName];
+      }
+    }
     if (englishVoices.length > 0) {
       // Validate voice index is within bounds
       if (settings.voiceIndex >= 0 && settings.voiceIndex < englishVoices.length) {
@@ -396,6 +415,7 @@ window.NarbeVoiceManager = (function() {
     if (englishVoices.length === 0) return false;
     
     settings.voiceIndex = (settings.voiceIndex + 1) % englishVoices.length;
+    settings.voiceChosen = true;
     
     // Update voice name to match new index
     if (englishVoices[settings.voiceIndex]) {
