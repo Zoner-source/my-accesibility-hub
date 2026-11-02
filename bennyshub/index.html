@@ -1837,7 +1837,7 @@
       }
       
       announce('Întors la meniu');
-      speak('Întors la meniu, apasă tasta space pentru a focaliza');
+      speak('Întors la meniu');
     }
 
     iframeBack.addEventListener('click', () => {
@@ -1893,7 +1893,7 @@
        
         const spokenName = screenNamesRO[name] || name;
         announce(`${spokenName}`);
-        speak(`${spokenName}. Apasă tasta space pentru a focaliza`);
+        speak(spokenName);
         
         // Re-enable pointer events after transition
         document.body.style.pointerEvents = '';
@@ -2446,6 +2446,7 @@
         document.getElementById('main').focus();
       }
       
+      // Said once, when the Hub starts; returning to a menu only names the screen.
       speak('Apasă tasta de spațiu pentru a începe');
       
       // Start navigation signal handling (Electron IPC or HTTP polling)
