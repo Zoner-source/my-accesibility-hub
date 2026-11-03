@@ -50,5 +50,13 @@
             "Educativ",
             "Sentimente"
         ]
+    },
+    "narbepuzzle": {
+        "title": "Puzzle",
+        "description": "Alege o piesă, apoi locul ei numerotat: 5 benzi, 4 pătrate sau un puzzle cu 10 piese. Fără scor, nu poți pierde.",
+        "genres": [
+            "Puzzle",
+            "Educativ"
+        ]
     }
 }
