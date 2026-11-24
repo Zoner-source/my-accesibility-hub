@@ -126,6 +126,20 @@ window.NarbeVoiceManager = (function() {
   /**
    * Load available voices from the speech synthesis API
    */
+  // Is this a Romanian voice? Engines label voices differently: "ro-RO",
+  // "ro_RO", "ron"/"rum" (some Android engines), "mo-MD", or only by name.
+  let noVoiceList = false; // the browser listed no voice within 2 s (see speak)
+  const HUB_LANG = 'ro-RO';
+  function isHubVoice(voice) {
+    if (!voice) return false;
+    const lang = String(voice.lang || '').replace('_', '-').toLowerCase();
+    const name = String(voice.name || '').toLowerCase();
+    const uri = String(voice.voiceURI || '').toLowerCase();
+    return lang.startsWith('ro') || lang.startsWith('rum') || lang === 'mo' || lang.startsWith('mo-') ||
+      /romanian|român|romana|andrei|ioana/.test(name) ||
+      /ro[-_]ro|ron/.test(uri);
+  }
+
   function loadVoices() {
     if (!('speechSynthesis' in window)) {
       console.warn('NarbeVoiceManager: Speech synthesis not supported');
@@ -136,13 +150,11 @@ window.NarbeVoiceManager = (function() {
     
     if (availableVoices.length > 0) {
       // Filter for English voices
-      englishVoices = availableVoices.filter(voice => 
-        voice.lang.startsWith('en-') || 
-        voice.lang.startsWith('ro-') || 
+      englishVoices = availableVoices.filter(voice =>
+        isHubVoice(voice) ||
+        voice.lang.startsWith('en-') ||
         voice.lang === 'en' ||
-        voice.lang === 'ro' ||
-        voice.name.toLowerCase().includes('english') ||
-        voice.name.toLowerCase().includes('romanian')
+        voice.name.toLowerCase().includes('english')
       );
       
       // If no English voices found, fallback to any English voice
@@ -163,7 +175,7 @@ window.NarbeVoiceManager = (function() {
       // the list yet and an English voice gets saved. Until the user picks one,
       // the Romanian voice wins whenever it is there.
       const hasRomanian = englishVoices.some(voice =>
-        voice.lang.toLowerCase().startsWith('ro') || voice.name.toLowerCase().includes('romanian')
+        isHubVoice(voice)
       );
       if (settings.voiceName && (settings.voiceChosen || !hasRomanian)) {
         let savedVoiceIndex = englishVoices.findIndex(voice => voice.name === settings.voiceName);
@@ -183,7 +195,7 @@ window.NarbeVoiceManager = (function() {
           // The saved voice is not on this device: fall back to a Romanian
           // voice rather than whichever voice happens to sit at the old index.
           const romanianIndex = englishVoices.findIndex(voice =>
-            voice.lang.toLowerCase().startsWith('ro') || voice.name.toLowerCase().includes('romanian')
+            isHubVoice(voice)
           );
           if (romanianIndex >= 0) settings.voiceIndex = romanianIndex;
           console.warn(`NarbeVoiceManager: Saved voice "${settings.voiceName}" not found, using index ${settings.voiceIndex}`);
@@ -191,7 +203,7 @@ window.NarbeVoiceManager = (function() {
       } else {
         // No voice chosen yet: the UI is Romanian, so default to a Romanian voice when one exists.
         const romanianIndex = englishVoices.findIndex(voice =>
-          voice.lang.toLowerCase().startsWith('ro') || voice.name.toLowerCase().includes('romanian')
+          isHubVoice(voice)
         );
         if (romanianIndex >= 0) settings.voiceIndex = romanianIndex;
       }
@@ -310,6 +322,12 @@ window.NarbeVoiceManager = (function() {
     if (!voicesLoaded) {
       retryLoadVoices();
     }
+
+    // A voice pack installed while the page was in the background (Android:
+    // Settings > Text-to-speech) shows up when the page is visible again.
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') loadVoices();
+    });
   }
 
   /**
@@ -441,11 +459,16 @@ window.NarbeVoiceManager = (function() {
   function speak(text, options = {}) {
     if (!settings.ttsEnabled || !text || !('speechSynthesis' in window)) return;
     
-    // If voices aren't loaded yet, wait for them
-    if (!voicesLoaded || englishVoices.length === 0) {
-      // Wait for voices to load, then try again
+    // If voices aren't loaded yet, wait for them - but not forever: some
+    // Android phones never list any voice, and waiting forever kept the whole
+    // Hub silent. After 2 s speak anyway; the device picks a voice for HUB_LANG.
+    if ((!voicesLoaded || englishVoices.length === 0) && !noVoiceList) {
+      let tries = 0;
       const waitForVoices = () => {
         if (voicesLoaded && englishVoices.length > 0) {
+          speak(text, options);
+        } else if (++tries >= 20) {
+          noVoiceList = true;
           speak(text, options);
         } else {
           setTimeout(waitForVoices, 100);
@@ -472,12 +495,17 @@ window.NarbeVoiceManager = (function() {
       utterance.pitch = options.pitch || settings.pitch;
       utterance.volume = options.volume || settings.volume;
       
-      // Set voice - should be available now
+      utterance.lang = HUB_LANG;
+      
+      // Set the voice only when it speaks the Hub's language, or when the user
+      // picked it. Otherwise leave it to the device: with the language set,
+      // Android uses its installed language pack even when Chrome does not
+      // list that voice, instead of reading the text with an English voice.
       const currentVoice = getCurrentVoice();
-      if (currentVoice) {
+      if (currentVoice && (isHubVoice(currentVoice) || settings.voiceChosen)) {
         utterance.voice = currentVoice;
       } else {
-        console.warn('NarbeVoiceManager: No voice available, using default');
+        console.warn('NarbeVoiceManager: No ' + HUB_LANG + ' voice listed; the device picks one for ' + HUB_LANG);
       }
       
       window.speechSynthesis.speak(utterance);
@@ -599,7 +627,18 @@ window.NarbeVoiceManager = (function() {
   init();
 
   // Public API
+  // The voice to give an utterance: the current voice when it speaks the
+  // Hub's language or the user picked it, otherwise null (let the device
+  // choose for getLang()). For code that builds its own utterances.
+  function getSpeakVoice() {
+    const voice = getCurrentVoice();
+    return voice && (isHubVoice(voice) || settings.voiceChosen) ? voice : null;
+  }
+
   return {
+    getSpeakVoice,
+    getLang: () => HUB_LANG,
+    isHubVoice,
     // Settings management
     getSettings,
     updateSettings,

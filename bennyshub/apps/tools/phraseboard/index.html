@@ -888,7 +888,7 @@ function updateHeaderForCurrentView(){
         const voices = window.NarbeVoiceManager.getEnglishVoices();
         if (voices[specificVoiceIndex]) {
           window.NarbeVoiceManager.cancel();
-          const utterance = new SpeechSynthesisUtterance(text);
+          const utterance = new SpeechSynthesisUtterance(text); utterance.lang = "ro-RO";
           utterance.voice = voices[specificVoiceIndex];
           utterance.rate = window.NarbeVoiceManager.getSettings().rate || 1;
           setupInputBlocking(utterance);
@@ -899,7 +899,7 @@ function updateHeaderForCurrentView(){
       
       if (isChild && gender && state.childVoices[gender]) {
         window.NarbeVoiceManager.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
+        const utterance = new SpeechSynthesisUtterance(text); utterance.lang = "ro-RO";
         utterance.voice = state.childVoices[gender];
         utterance.pitch = gender === 'girl' ? 1.8 : 1.6;
         // Child voices speak a little faster, relative to the chosen speed.
@@ -944,7 +944,7 @@ function updateHeaderForCurrentView(){
       const voiceSettings = window.NarbeVoiceManager.getSettings();
       if (!voiceSettings.ttsEnabled || !text) return;
       window.NarbeVoiceManager.cancel();
-      const u = new SpeechSynthesisUtterance(text);
+      const u = new SpeechSynthesisUtterance(text); u.lang = "ro-RO";
       if (voice) u.voice = voice;
       window.speechSynthesis.speak(u);
     }
