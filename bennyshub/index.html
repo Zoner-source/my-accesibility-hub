@@ -916,6 +916,15 @@
             </div>
           </button>
 
+          <button class="card-btn" id="scandir-toggle">
+            <span class="kicker">Setare</span>
+            <div class="btn-title">Direcția scanării</div>
+            <div class="row">
+              <p class="desc">Înainte: apăsare = următorul, Space ținut = înapoi. Înapoi: invers.</p>
+              <span class="pill" id="scandir-status">Înainte</span>
+            </div>
+          </button>
+
           <button class="card-btn" id="uisize-toggle">
             <span class="kicker">Setare</span>
             <div class="btn-title">Mărime</div>
@@ -1510,6 +1519,8 @@
       }
 
       document.getElementById('scanspeed-status').textContent = scanSpeedName;
+      document.getElementById('scandir-status').textContent =
+        (window.NarbeScanManager && window.NarbeScanManager.isReverseScan()) ? 'Înapoi' : 'Înainte';
 
       // Apply auto scan setting
       document.getElementById('autoscan-status').textContent = autoScan ? 'Activat' : 'Dezactivat';
@@ -1573,6 +1584,11 @@
       
       focusAt(focusIndex - 1);
     }
+
+    // Scan direction (Hub Settings): a tap steps forward and holding Space
+    // steps backward, or the other way round when Scan direction is Backward.
+    function tapStep() { if ((window.narbeTapDir ? narbeTapDir() : 1) > 0) focusNext(); else focusPrevious(); }
+    function holdStep() { if ((window.narbeTapDir ? narbeTapDir() : 1) > 0) focusPrevious(); else focusNext(); }
 
     // TTS functionality using unified voice manager
     function speak(text) {
@@ -1692,6 +1708,14 @@
           applySettings();
           speak(`Viteza de scanare este ${name}`);
       }
+    });
+
+    document.getElementById('scandir-toggle').addEventListener('click', () => {
+      if (!window.NarbeScanManager) return;
+      const reverse = !window.NarbeScanManager.isReverseScan();
+      window.NarbeScanManager.setReverseScan(reverse);
+      applySettings();
+      speak(`Direcția scanării: ${reverse ? 'Înapoi' : 'Înainte'}`);
     });
 
     document.getElementById('uisize-toggle').addEventListener('click', () => {
@@ -2171,13 +2195,13 @@
         // Set timeout for backwards scanning
         spaceHoldTimeout = setTimeout(() => {
           if (spacePressed && !iframeContainer.classList.contains('active')) {
-            speak('Scanare înapoi');
-            focusPrevious();
+            speak((window.narbeTapDir ? narbeTapDir() : 1) > 0 ? 'Scanare înapoi' : 'Scanare înainte');
+            holdStep();
             
             // Start backwards auto-scan
             backwardsScanInterval = setInterval(() => {
               if (spacePressed && !iframeContainer.classList.contains('active')) {
-                focusPrevious();
+                holdStep();
               } else {
                 clearInterval(backwardsScanInterval);
                 backwardsScanInterval = null;
@@ -2245,7 +2269,7 @@
         // Check if this was a short press (normal forward scanning)
         const holdDuration = Date.now() - spaceHoldStartTime;
         if (holdDuration < BACKWARDS_SCAN_THRESHOLD) {
-          focusNext();
+          tapStep();
         }
         
       } else if(isEnterKey(e) && enterPressed){
